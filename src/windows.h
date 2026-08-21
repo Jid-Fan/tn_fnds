@@ -7,10 +7,8 @@
 using std::min;
 using std::max;
 typedef uint32_t DWORD;
-#if 0
-#define _aligned_malloc(a,b) aligned_alloc(b,a)
-#else
 #include <malloc.h>
+#if !defined(__MINGW32__)
 #define _aligned_malloc(a,b) memalign(b,a)
+#define _aligned_free(a) free(a)
 #endif
-#define _aligned_free(a)

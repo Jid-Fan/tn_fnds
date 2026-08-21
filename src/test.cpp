@@ -695,7 +695,7 @@ void Opening(double *f0, int tLen, int fs, fft_complex **waveSpecgram,int equLen
 	for(i = 0;i < equLen;i++)
 	{
 		f0Frame = max(0, min(tLen-1, (int)((double)((i+1) * fftl / 2) / fs * 1000 / FRAMEPERIOD + 0.5)));
-		if(f0[f0Frame] == 0.0) continue;
+		/* W-1 / unvoiced frames are valid for spectral opening. */
 		for(j = 0;j < fftl/2+1;j++)
 		{	
 			waveSpecgram[i][j][0] *= volumeMap[j];
@@ -926,14 +926,17 @@ int main(int argc, char *argv[])
 	gRatio = pow(10, -flag_g / 200);
 
 	double flag_W = 0.0;//Wフラグ（周波数強制設定）F<0無声音  F=0無効  50>=F<=1000 指定の周波数に設定 
-	double f0Rand = 0;//
+	double f0Rand = 0;
+	int hasFlag_W = 0;
 	if(argc > 5 && (cp = strchr(argv[5],'W')) != 0)
 	{
+		hasFlag_W = 1;
 		sscanf(cp+1, "%lf", &flag_W);
 		if (flag_W > 1000) flag_W = 1000;
-		if ((flag_W <    50) && (flag_W >    0)){f0Rand =  flag_W / 50; flag_W = 0;}
-		if (flag_W <    0) flag_W = -1;
+		if ((flag_W < 50) && (flag_W > 0)){f0Rand = flag_W / 50; flag_W = 0;}
+		if (flag_W < 0) flag_W = -1;
 	}
+	if(!hasFlag_W) flag_W = -1;
 	int flag_d = 5;//独自フラグ　DIOのF0分析結果にLPFをかける 0~20 def 5
 //	if(argc > 5 && (cp = strchr(argv[5],'d')) != 0) //デフォルトから変更する必要が無いと感じたのでとりあえず無効
 //	{
@@ -1080,6 +1083,25 @@ int main(int argc, char *argv[])
 	st = stLengthMsec + offset;
 	ed = inputLengthMsec - edLengthMsec;
 
+	int loopStartFrameHint = -1;
+	int loopEndFrameHint = -1;
+	int loopOsFrame = os / (int)FRAMEPERIOD;
+	int loopStFrame = st / (int)FRAMEPERIOD;
+	int loopEdFrame = min(ed / (int)FRAMEPERIOD, tLen - 1);
+	int loopForwardLength = loopEdFrame - loopStFrame - 2;
+	int preLoopFrameCount = (int)((loopStFrame - loopOsFrame) * vRatio + 0.5);
+	if(loopForwardLength >= 2 && preLoopFrameCount >= 0 &&
+	   preLoopFrameCount < tLen2)
+	{
+		loopStartFrameHint = preLoopFrameCount;
+		loopEndFrameHint = min(tLen2,
+			loopStartFrameHint + loopForwardLength);
+		if(loopEndFrameHint - loopStartFrameHint < 2)
+		{
+			loopStartFrameHint = -1;
+			loopEndFrameHint = -1;
+		}
+	}
 	tLen2 = stretchTime(f0, tLen, fftl, residualSpecgramIndex, 
 			fixedF0, tLen2, fixedResidualSpecgramIndex,
 			os/(int)FRAMEPERIOD, st/(int)FRAMEPERIOD, min(ed/(int)FRAMEPERIOD, tLen-1),
@@ -1142,7 +1164,8 @@ int main(int argc, char *argv[])
 	printf("\nSynthesis\n");
 	elapsedTime = timeGetTime();
 	synthesisPt101(fixedDefault_f0, fixedF0, tLen2, residualSpecgram, residualSpecgramLength, fixedResidualSpecgramIndex,
-		fixedVolume, fftl, FRAMEPERIOD, fs, y, signalLen2);
+		fixedVolume, loopStartFrameHint, loopEndFrameHint,
+		fftl, FRAMEPERIOD, fs, y, signalLen2);
 
 	printf("WORLD: %d [msec]\n", timeGetTime() - elapsedTime);
 

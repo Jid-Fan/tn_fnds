@@ -1,0 +1,147 @@
+expressions:
+  pitch_offset:
+    name: 音高偏移（每单位约10音分）
+    abbr: POff
+    type: Numerical
+    min: -100
+    max: 100
+    default_value: 0
+    is_flag: true
+    flag: t
+  extreme_voice:
+    name: W模式（-1无基频，0～50普通分析，>50固定基频）
+    abbr: WMod
+    type: Numerical
+    min: -1
+    max: 1000
+    default_value: -1
+    is_flag: true
+    flag: W
+  pitch_volume:
+    name: 音高变化响度补偿
+    abbr: PVol
+    type: Numerical
+    min: 0
+    max: 100
+    default_value: 0
+    is_flag: true
+    flag: A
+  granular_pitch:
+    name: 颗粒间距变调强度（旧版路径）
+    abbr: Mfol
+    type: Numerical
+    min: 0
+    max: 100
+    default_value: 0
+    is_flag: true
+    flag: mf
+  granular_texture:
+    name: 大颗粒纹理模式
+    abbr: Mtex
+    type: Numerical
+    min: 0
+    max: 1
+    default_value: 0
+    is_flag: true
+    flag: mt
+  high_quality:
+    name: 另一条连续变调路径
+    abbr: Qual
+    type: Numerical
+    min: 0
+    max: 1
+    default_value: 0
+    is_flag: true
+    flag: hq
+  loudness_compensation:
+    name: 变调响度补偿
+    abbr: Loud
+    type: Numerical
+    min: 0
+    max: 100
+    default_value: 0
+    is_flag: true
+    flag: lc
+  consonant_gain:
+    name: 清辅音增益
+    abbr: Cons
+    type: Numerical
+    min: 0
+    max: 100
+    default_value: 0
+    is_flag: true
+    flag: b
+  voice_strength:
+    name: 频谱开放度
+    abbr: Open
+    type: Numerical
+    min: -100
+    max: 100
+    default_value: 0
+    is_flag: true
+    flag: O
+  loop_mode:
+    name: 循环模式（forward正向 / pingpong正反）
+    abbr: Mode
+    type: Options
+    min: 0
+    max: 1
+    default_value: 0
+    is_flag: true
+    options:
+    - forward
+    - pingpong
+  loop_start:
+    name: 循环起点偏移（毫秒）
+    abbr: LSta
+    type: Numerical
+    min: -500
+    max: 500
+    default_value: 0
+    is_flag: true
+    flag: ls
+  loop_end:
+    name: 循环终点偏移（毫秒，仅非正值有效）
+    abbr: LEnd
+    type: Numerical
+    min: -500
+    max: 0
+    default_value: 0
+    is_flag: true
+    flag: lf
+  crossfade:
+    name: 循环交叉淡化（毫秒）
+    abbr: Fade
+    type: Numerical
+    min: 0
+    max: 1000
+    default_value: 0
+    is_flag: true
+    flag: cf
+  random_start:
+    name: 循环起点随机范围（毫秒）
+    abbr: RSta
+    type: Numerical
+    min: 0
+    max: 200
+    default_value: 0
+    is_flag: true
+    flag: rs
+  random_end:
+    name: 循环终点随机范围（毫秒）
+    abbr: REnd
+    type: Numerical
+    min: 0
+    max: 200
+    default_value: 0
+    is_flag: true
+    flag: rf
+  volume_stability:
+    name: 慢速响度稳定
+    abbr: Stab
+    type: Numerical
+    min: 0
+    max: 100
+    default_value: 0
+    is_flag: true
+    flag: sv

@@ -1,0 +1,147 @@
+expressions:
+  pitch_offset:
+    name: Pitch Offset (10 cents per unit)
+    abbr: POff
+    type: Numerical
+    min: -100
+    max: 100
+    default_value: 0
+    is_flag: true
+    flag: t
+  extreme_voice:
+    name: W Mode (-1 unvoiced, 0-50 analyzed, >50 fixed F0)
+    abbr: WMod
+    type: Numerical
+    min: -1
+    max: 1000
+    default_value: -1
+    is_flag: true
+    flag: W
+  pitch_volume:
+    name: Pitch-Change Volume Compensation
+    abbr: PVol
+    type: Numerical
+    min: 0
+    max: 100
+    default_value: 0
+    is_flag: true
+    flag: A
+  granular_pitch:
+    name: Granular Pitch Tracking (Legacy Path)
+    abbr: Mfol
+    type: Numerical
+    min: 0
+    max: 100
+    default_value: 0
+    is_flag: true
+    flag: mf
+  granular_texture:
+    name: Large-Grain Texture Mode
+    abbr: Mtex
+    type: Numerical
+    min: 0
+    max: 1
+    default_value: 0
+    is_flag: true
+    flag: mt
+  high_quality:
+    name: Alternative Continuous Pitch Shift
+    abbr: Qual
+    type: Numerical
+    min: 0
+    max: 1
+    default_value: 0
+    is_flag: true
+    flag: hq
+  loudness_compensation:
+    name: Pitch-Change Loudness Compensation
+    abbr: Loud
+    type: Numerical
+    min: 0
+    max: 100
+    default_value: 0
+    is_flag: true
+    flag: lc
+  consonant_gain:
+    name: Unvoiced Consonant Gain
+    abbr: Cons
+    type: Numerical
+    min: 0
+    max: 100
+    default_value: 0
+    is_flag: true
+    flag: b
+  voice_strength:
+    name: Spectral Opening
+    abbr: Open
+    type: Numerical
+    min: -100
+    max: 100
+    default_value: 0
+    is_flag: true
+    flag: O
+  loop_mode:
+    name: Loop Mode (forward / pingpong)
+    abbr: Mode
+    type: Options
+    min: 0
+    max: 1
+    default_value: 0
+    is_flag: true
+    options:
+    - forward
+    - pingpong
+  loop_start:
+    name: Loop Start Offset (ms)
+    abbr: LSta
+    type: Numerical
+    min: -500
+    max: 500
+    default_value: 0
+    is_flag: true
+    flag: ls
+  loop_end:
+    name: Loop End Offset (ms; non-positive)
+    abbr: LEnd
+    type: Numerical
+    min: -500
+    max: 0
+    default_value: 0
+    is_flag: true
+    flag: lf
+  crossfade:
+    name: Loop Crossfade (ms)
+    abbr: Fade
+    type: Numerical
+    min: 0
+    max: 1000
+    default_value: 0
+    is_flag: true
+    flag: cf
+  random_start:
+    name: Random Loop Start Range (ms)
+    abbr: RSta
+    type: Numerical
+    min: 0
+    max: 200
+    default_value: 0
+    is_flag: true
+    flag: rs
+  random_end:
+    name: Random Loop End Range (ms)
+    abbr: REnd
+    type: Numerical
+    min: 0
+    max: 200
+    default_value: 0
+    is_flag: true
+    flag: rf
+  volume_stability:
+    name: Slow Volume Stabilization
+    abbr: Stab
+    type: Numerical
+    min: 0
+    max: 100
+    default_value: 0
+    is_flag: true
+    flag: sv

@@ -67,6 +67,7 @@ void synthesisPt100(double *f0, int tLen, double **residualSpecgram, int fftl, d
 //tn_fnds v0.0.3 ‚É‚Ä’Ç‰Á
 void synthesisPt101(double fixedDefault_f0, double *f0, int tLen, double **aperiodicity, int *ResidualSpecgramLength,
 					int *fixedResidualSpecgramIndex, double *volume,
+					int loopStartFrameHint, int loopEndFrameHint,
 					int fftl, double framePeriod, int fs, double *synthesisOut, int xLen);
 //------------------------------------------------------------------------------------
 // Matlab ŠÖ”‚ÌˆÚA

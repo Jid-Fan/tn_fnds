@@ -1,3 +1,7 @@
 src/*.o
-src/tn_fnds
+src/tn_fndScream
 *.exe
+!src/tn_fndScream.exe
+vendor/*.zip
+vendor/**/*.o
+test-output/
