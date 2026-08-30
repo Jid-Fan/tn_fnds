@@ -8,6 +8,9 @@ It is not a general-purpose resampler for ordinary clean or powerful vocals.
 Even a powerful voicebank with a clear harmonic structure may produce
 synthetic artifacts, unstable pitch, or errors when used with the experimental
 modes.
+In particular, `hs` is not a reliable way to turn an extreme vocal into a
+natural clean vocal. It is currently not recommended for that purpose, especially
+at `hs100`.
 
 ## Quick start
 
@@ -62,7 +65,7 @@ voicebanks.
 
 | Flag | Range | Description |
 | --- | ---: | --- |
-| `hs` | `0–100` | Replaces the stable vowel region with a harmonic layer whose spectral envelope follows the rendered source over time, retaining broad mouth/formant movement without retaining the original shimmer and noise at high values. `hs0` is the default and changes nothing; `hs100` is a full harmonic replacement and can still sound synthetic. |
+| `hs` | `0–100` | Replaces the stable vowel region with a harmonic layer whose spectral envelope follows the rendered source over time. It is an extreme-vocal timbre experiment, not a natural clean-vocal converter; higher values may sound blurry, metallic, or synthesizer-like. `hs0` is the default and changes nothing. |
 | `he` | `0–100` | Searches for actual spectral peaks near the requested harmonic positions and emphasizes them without adding harmonics or replacing the waveform. It tolerates some pitch drift in extreme vocals, making the effect easier to hear than an exact-frequency boost. |
 | `hf` | `0–100` | Experimental forced melodic layer. When `he` finds little existing energy, `hf` adds a small random-phase periodic component at the requested positions. It can make an otherwise non-harmonic sound more melodic, but may sound clearly synthetic. |
 | `ho` | `-2000–2000` ms | Manually moves the estimated `hs` onset. Positive values start harmonic cleaning later; negative values start it earlier. `ho0` leaves the automatic estimate unchanged. |
@@ -185,6 +188,11 @@ hs60
 hs100
 ```
 
+This is an extreme-vocal timbre experiment, not a clean-vocalization feature.
+The current version may lose the original singer's articulation and timbre at
+`hs100`. For a natural clean-vocal result, use a voicebank and resampler intended
+for clean vocals.
+
 The effect starts after an automatically estimated consonant/unstable-onset
 boundary. Use `ho` if that estimate is too early or too late. The stable
 vowel's broad spectral envelope is used as an approximate mouth/formant shape.
@@ -209,9 +217,10 @@ the added harmonic structure was not present in the recording.
   from the granular path.
 - `hq2` is experimental and uses a conservative frequency split; it is not a
   guaranteed harmonic/noise separation.
-- `hs` is an experimental harmonicizer, not a trained neural vocoder. It does
-  not know the exact vowel identity and may sound buzzy or synthetic at high
-  values.
+- `hs` is an experimental harmonicizer, not a trained neural vocoder or a
+  natural extreme-vocal-to-clean-vocal converter. It does not know the exact
+  vowel identity and may become blurry, lose the original vocal identity, or
+  sound buzzy, synthesizer-like, or metallic at high values.
 - `pingpong` can still sound artificial when the chosen loop region contains strong
   changes in pitch, spectrum, or volume.
 - The resampler is experimental. Results are not guaranteed to be better than
