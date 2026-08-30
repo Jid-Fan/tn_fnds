@@ -11,4 +11,12 @@
 int rubberBandPitchShift(const double *input, int inputLength, int fs,
                          double pitchScale, double *output);
 
+/*
+ * Experimental extreme-vocal path:
+ * pitch-shift the low-frequency pitch scaffold while keeping the
+ * high-frequency noisy/aperiodic texture from the original waveform.
+ */
+int hybridExtremePitchShift(const double *input, int inputLength, int fs,
+                            double pitchScale, double *output);
+
 #endif

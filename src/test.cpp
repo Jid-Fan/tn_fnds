@@ -1,17 +1,17 @@
-// UTAU—p‰¹º‡¬ƒGƒ“ƒWƒ“wtn_fndsx version 0.0.6    2012/3/31
+// UTAUï¿½pï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Gï¿½ï¿½ï¿½Wï¿½ï¿½ï¿½wtn_fndsï¿½x version 0.0.6    2012/3/31
 //
-// ‚±‚ÌƒvƒƒOƒ‰ƒ€‚ÍX¨«‰ë‚ÌWORLD”ÅUTAU‡¬ƒGƒ“ƒWƒ“wƒGƒ^[ƒiƒ‹ƒtƒH[ƒXƒuƒŠƒTƒ“ƒvƒ‰[ 
-// ƒWƒFƒ“ƒgƒŠ[EƒEƒB[ƒvƒX@`‘Šè‚Í€‚ÊC‰´‚à€‚Ê`x(EFB-GW)‚ğƒJƒXƒ^ƒ}ƒCƒY‚µA˜A‘±‰¹‚â
-// q‰¹‘¬“xAˆê•”‚Ìƒtƒ‰ƒO‚É‘Î‰‚³‚¹‚½‚à‚Ì‚Å‚·B
-// ì¬‚É“–‚½‚èAˆ¹‰®^ÒŠ—‚Ìworld4utau‚Ìƒ\[ƒX‚à—¬—p‚³‚¹‚Ä‚¢‚½‚¾‚«‚Ü‚µ‚½B
+// ï¿½ï¿½ï¿½Ìƒvï¿½ï¿½ï¿½Oï¿½ï¿½ï¿½ï¿½ï¿½ÍXï¿½ï¿½ï¿½ï¿½ï¿½ëï¿½ï¿½WORLDï¿½ï¿½UTAUï¿½ï¿½ï¿½ï¿½ï¿½Gï¿½ï¿½ï¿½Wï¿½ï¿½ï¿½wï¿½Gï¿½^ï¿½[ï¿½iï¿½ï¿½ï¿½tï¿½Hï¿½[ï¿½Xï¿½uï¿½ï¿½ï¿½Tï¿½ï¿½ï¿½vï¿½ï¿½ï¿½[ 
+// ï¿½Wï¿½Fï¿½ï¿½ï¿½gï¿½ï¿½ï¿½[ï¿½Eï¿½Eï¿½Bï¿½[ï¿½vï¿½Xï¿½@ï¿½`ï¿½ï¿½ï¿½ï¿½Íï¿½ï¿½ÊCï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê`ï¿½x(EFB-GW)ï¿½ï¿½ï¿½Jï¿½Xï¿½^ï¿½}ï¿½Cï¿½Yï¿½ï¿½ï¿½Aï¿½Aï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+// ï¿½qï¿½ï¿½ï¿½ï¿½ï¿½xï¿½Aï¿½ê•”ï¿½Ìƒtï¿½ï¿½ï¿½Oï¿½É‘Î‰ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ì‚Å‚ï¿½ï¿½B
+// ï¿½ì¬ï¿½É“ï¿½ï¿½ï¿½ï¿½ï¿½Aï¿½ï¿½ï¿½ï¿½ï¿½^ï¿½ÒŠï¿½ï¿½ï¿½ï¿½ï¿½world4utauï¿½Ìƒ\ï¿½[ï¿½Xï¿½ï¿½ï¿½ï¿½ï¿½pï¿½ï¿½ï¿½ï¿½ï¿½Ä‚ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ü‚ï¿½ï¿½ï¿½ï¿½B
 //
-// ---ˆÈ‰ºŒ´–{‚ÌƒRƒƒ“ƒg
+// ---ï¿½È‰ï¿½ï¿½ï¿½ï¿½{ï¿½ÌƒRï¿½ï¿½ï¿½ï¿½ï¿½g
 //
-// ƒGƒ^[ƒiƒ‹ƒtƒH[ƒXƒuƒŠƒTƒ“ƒvƒ‰[ ƒWƒFƒ“ƒgƒŠ[EƒEƒB[ƒvƒX@`‘Šè‚Í€‚ÊC‰´‚à€‚Ê`
-// ƒlƒ^‚Å‚Í‚¶‚ß‚½WORLD”ÅUTAU‡¬ƒGƒ“ƒWƒ“‚Å‚·DWORLD 0.0.4‚ğƒKƒ“ƒKƒ“•Ï‚¦‚Ä‚¢‚é‚Ì‚ÅC
-// ‚±‚ÌƒvƒƒOƒ‰ƒ€‚ÍWORLD‚Æ‚Í•Ê•¨‚¾‚Æv‚Á‚½‚Ù‚¤‚ª—Ç‚¢‚Å‚·D
-// ƒvƒ‰ƒ`ƒi‚Ì”š‚Íç•ª—¦‚Å‚Ìƒ“x‚ğ•\‚µ‚Ä‚¢‚ÄC850ˆÈã‚ªƒvƒ‰ƒ`ƒi‚Æ”F‚ß‚ç‚ê‚éD
-// ‚æ‚Á‚ÄPt100‚Æ‚¢‚¤‚Ì‚ÍCƒvƒ‰ƒ`ƒi‚Æ‚Í‚¢‚¦‚È‚¢•Ê‚Ì‰½‚©i–{ƒvƒƒOƒ‰ƒ€‚É‚¨‚¯‚éV‹@”\j‚Å‚·D
+// ï¿½Gï¿½^ï¿½[ï¿½iï¿½ï¿½ï¿½tï¿½Hï¿½[ï¿½Xï¿½uï¿½ï¿½ï¿½Tï¿½ï¿½ï¿½vï¿½ï¿½ï¿½[ ï¿½Wï¿½Fï¿½ï¿½ï¿½gï¿½ï¿½ï¿½[ï¿½Eï¿½Eï¿½Bï¿½[ï¿½vï¿½Xï¿½@ï¿½`ï¿½ï¿½ï¿½ï¿½Íï¿½ï¿½ÊCï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê`
+// ï¿½lï¿½^ï¿½Å‚Í‚ï¿½ï¿½ß‚ï¿½WORLDï¿½ï¿½UTAUï¿½ï¿½ï¿½ï¿½ï¿½Gï¿½ï¿½ï¿½Wï¿½ï¿½ï¿½Å‚ï¿½ï¿½DWORLD 0.0.4ï¿½ï¿½ï¿½Kï¿½ï¿½ï¿½Kï¿½ï¿½ï¿½Ï‚ï¿½ï¿½Ä‚ï¿½ï¿½ï¿½Ì‚ÅC
+// ï¿½ï¿½ï¿½Ìƒvï¿½ï¿½ï¿½Oï¿½ï¿½ï¿½ï¿½ï¿½ï¿½WORLDï¿½Æ‚Í•Ê•ï¿½ï¿½ï¿½ï¿½Ævï¿½ï¿½ï¿½ï¿½ï¿½Ù‚ï¿½ï¿½ï¿½ï¿½Ç‚ï¿½ï¿½Å‚ï¿½ï¿½D
+// ï¿½vï¿½ï¿½ï¿½`ï¿½iï¿½Ìï¿½ï¿½ï¿½ï¿½Íç•ªï¿½ï¿½ï¿½Å‚Ìï¿½ï¿½xï¿½ï¿½\ï¿½ï¿½ï¿½Ä‚ï¿½ï¿½ÄC850ï¿½Èã‚ªï¿½vï¿½ï¿½ï¿½`ï¿½iï¿½Æ”Fï¿½ß‚ï¿½ï¿½ï¿½D
+// ï¿½ï¿½ï¿½ï¿½ï¿½Pt100ï¿½Æ‚ï¿½ï¿½ï¿½ï¿½Ì‚ÍCï¿½vï¿½ï¿½ï¿½`ï¿½iï¿½Æ‚Í‚ï¿½ï¿½ï¿½ï¿½È‚ï¿½ï¿½Ê‚Ì‰ï¿½ï¿½ï¿½ï¿½iï¿½{ï¿½vï¿½ï¿½ï¿½Oï¿½ï¿½ï¿½ï¿½ï¿½É‚ï¿½ï¿½ï¿½ï¿½ï¿½Vï¿½@ï¿½\ï¿½jï¿½Å‚ï¿½ï¿½D
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -21,28 +21,29 @@
 #include <windows.h>
 
 #include "world.h"
+#include "tn_fnds_ext.h"
 #include "wavread.h"
 
 #include <math.h>
 
 inline DWORD timeGetTime() { return (DWORD)time(NULL) * 1000; }
 
-// 13ˆø”‚Ì‚¤‚¿
-// 1 “ü—Íƒtƒ@ƒCƒ‹iOKj
-// 2 o—Íƒtƒ@ƒCƒ‹iOKj
-// 3 ‰¹ŠKiOKj
-// 4 q‰¹‘¬“x
-// 5 ƒtƒ‰ƒOi–³‹j(OK)
-// 6 ƒIƒtƒZƒbƒg
-// 7 ’·‚³’²®
-// 8 q‰¹•”
-// 9 ƒuƒ‰ƒ“ƒN
-// 10 ƒ{ƒŠƒ…[ƒ€ (OK)
-// 11 ƒ‚ƒWƒ…ƒŒ[ƒVƒ‡ƒ“ (OK)
-// 12 ƒeƒ“ƒ|
-// 13 ƒsƒbƒ`ƒxƒ“ƒh
+// 13ï¿½ï¿½ï¿½ï¿½ï¿½Ì‚ï¿½ï¿½ï¿½
+// 1 ï¿½ï¿½ï¿½Íƒtï¿½@ï¿½Cï¿½ï¿½ï¿½iOKï¿½j
+// 2 ï¿½oï¿½Íƒtï¿½@ï¿½Cï¿½ï¿½ï¿½iOKï¿½j
+// 3 ï¿½ï¿½ï¿½Kï¿½iOKï¿½j
+// 4 ï¿½qï¿½ï¿½ï¿½ï¿½ï¿½x
+// 5 ï¿½tï¿½ï¿½ï¿½Oï¿½iï¿½ï¿½ï¿½ï¿½ï¿½j(OK)
+// 6 ï¿½Iï¿½tï¿½Zï¿½bï¿½g
+// 7 ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+// 8 ï¿½qï¿½ï¿½ï¿½ï¿½
+// 9 ï¿½uï¿½ï¿½ï¿½ï¿½ï¿½N
+// 10 ï¿½{ï¿½ï¿½ï¿½ï¿½ï¿½[ï¿½ï¿½ (OK)
+// 11 ï¿½ï¿½ï¿½Wï¿½ï¿½ï¿½ï¿½ï¿½[ï¿½Vï¿½ï¿½ï¿½ï¿½ (OK)
+// 12 ï¿½eï¿½ï¿½ï¿½|
+// 13 ï¿½sï¿½bï¿½`ï¿½xï¿½ï¿½ï¿½h
 
-// •ªÍƒVƒtƒg—Ê [msec]
+// ï¿½ï¿½ï¿½ÍƒVï¿½tï¿½gï¿½ï¿½ [msec]
 #define FRAMEPERIOD 2.0
 
 #pragma comment(lib, "winmm.lib")
@@ -135,7 +136,7 @@ int getF0Contour(char *input, double *output)
 	while(input[i] != '\0')
 	{
 		if(input[i] == '#')
-		{ // •Êì‹Æ‚É‚¢‚Á‚Ä‚ç‚Á‚µ‚á‚¢
+		{ // ï¿½Êï¿½Æ‚É‚ï¿½ï¿½ï¿½ï¿½Ä‚ï¿½ï¿½ï¿½ï¿½ï¿½á‚¢
 			length = 0;
 			for(j = i+1;input[j]!='#';j++)
 			{
@@ -158,7 +159,7 @@ int getF0Contour(char *input, double *output)
 	return count;
 }
 
-//ˆ¹‰®^ÒŠ—‚Ìworld4utau.cpp‚©‚çˆÚA
+//ï¿½ï¿½ï¿½ï¿½ï¿½^ï¿½ÒŠï¿½ï¿½ï¿½ï¿½ï¿½world4utau.cppï¿½ï¿½ï¿½ï¿½ÚA
 double getFreqAvg(double f0[], int tLen)
 {
 	int i, j;
@@ -172,7 +173,7 @@ double getFreqAvg(double f0[], int tLen)
 		if (value < 1000.0 && value > 55.0)
 		{
 			r = 1.0;
-			//˜A‘±‚µ‚Ä‹ß‚¢’l‚Ìê‡‚ÌƒEƒGƒCƒg‚ğd‚­‚·‚é
+			//ï¿½Aï¿½ï¿½ï¿½ï¿½ï¿½Ä‹ß‚ï¿½ï¿½lï¿½Ìê‡ï¿½ÌƒEï¿½Gï¿½Cï¿½gï¿½ï¿½ï¿½dï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 			for (j = 0; j <= 5; j++)
 			{
 				if (i > j) {
@@ -190,7 +191,7 @@ double getFreqAvg(double f0[], int tLen)
 	if (base_value > 0) freq_avg /= base_value;
 	return freq_avg;
 }
-//ˆ¹‰®^ÒŠ—‚Ìworld4utau.cpp‚©‚çˆÚA
+//ï¿½ï¿½ï¿½ï¿½ï¿½^ï¿½ÒŠï¿½ï¿½ï¿½ï¿½ï¿½world4utau.cppï¿½ï¿½ï¿½ï¿½ÚA
 int get64(int c)
 {
     if (c >= '0' && c <='9')
@@ -218,7 +219,7 @@ int get64(int c)
         return 0;
     }
 }
-//ˆ¹‰®^ÒŠ—‚Ìworld4utau.cpp‚©‚çˆÚA
+//ï¿½ï¿½ï¿½ï¿½ï¿½^ï¿½ÒŠï¿½ï¿½ï¿½ï¿½ï¿½world4utau.cppï¿½ï¿½ï¿½ï¿½ÚA
 int decpit(char *str, int *dst, int cnt)
 {
 	int len = 0;
@@ -256,7 +257,7 @@ int decpit(char *str, int *dst, int cnt)
 void equalizingPicth(double *f0, int tLen, char *scaleParam, int modulationParam, int flag_t)
 {
 	int i;
-	// ‚Ü‚¸•½‹Ï’l‚ğ’²‚×‚éD
+	// ï¿½Ü‚ï¿½ï¿½ï¿½ï¿½Ï’lï¿½ğ’²‚×‚ï¿½D
 	double averageF0;
 	double modulation;
 
@@ -269,7 +270,7 @@ void equalizingPicth(double *f0, int tLen, char *scaleParam, int modulationParam
 	double targetF0;
 	int bias = 0;
 
-	// –Ú•W‚Æ‚·‚é‰¹ŠK‚Ì“¯’è
+	// ï¿½Ú•Wï¿½Æ‚ï¿½ï¿½é‰¹ï¿½Kï¿½Ì“ï¿½ï¿½ï¿½
 	if(scaleParam[1] == '#') bias = 1;
 
 	switch(scaleParam[0])
@@ -331,16 +332,16 @@ int stretchTime(double *f0, int tLen, int fftl, int *residualSpecgramIndex,
 	int i, k;
 	int st2, ed2;
 
-	st2 = min(tLen2, (int)((st-os) * vRatio + 0.5));  //LkŒã‚Ìq‰¹•”ƒtƒŒ[ƒ€
-    ed2 = min(tLen2, (int)(Length2 + 0.5));     //‡¬Œã‚ÌƒTƒ“ƒvƒ‹”
-	// ‘O”¼  
+	st2 = min(tLen2, (int)((st-os) * vRatio + 0.5));  //ï¿½Lï¿½kï¿½ï¿½Ìqï¿½ï¿½ï¿½ï¿½ï¿½tï¿½ï¿½ï¿½[ï¿½ï¿½
+    ed2 = min(tLen2, (int)(Length2 + 0.5));     //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ÌƒTï¿½ï¿½ï¿½vï¿½ï¿½ï¿½ï¿½
+	// ï¿½Oï¿½ï¿½  
 	for(i = 0;i < st2;i++)
 	{
 		k = max(0, min(tLen-1, int(i/vRatio) + os));
 		f02[i] = f0[k];
 		residualSpecgramIndex2[i] = residualSpecgramIndex[k];
 	}
-	// Œã”¼iƒ‹[ƒv®ˆø‚«L‚Î‚µj
+	// ï¿½ã”¼ï¿½iï¿½ï¿½ï¿½[ï¿½vï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Lï¿½Î‚ï¿½ï¿½j
 	if(mode == 0)
 	{
 		i = st2;
@@ -364,8 +365,8 @@ int stretchTime(double *f0, int tLen, int fftl, int *residualSpecgramIndex,
 	}
 	else
 	{
-		// Œã”¼iUTAU®ˆø‚«L‚Î‚µj
-		if(ed2-st2 > ed-st)//ˆø‚«L‚Î‚µ
+		// ï¿½ã”¼ï¿½iUTAUï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Lï¿½Î‚ï¿½ï¿½j
+		if(ed2-st2 > ed-st)//ï¿½ï¿½ï¿½ï¿½ï¿½Lï¿½Î‚ï¿½
 		{
 			double ratio;
 			ratio = (double)(ed-st)/(ed2-st2);
@@ -435,14 +436,14 @@ void f0Lpf(double *f0, int tLen, int flag_d)
 	for(i = 0; i < tLen; i++) f0[i] = newf0[i];
 }
 
-//ƒCƒRƒ‰ƒCƒWƒ“ƒO—pƒXƒyƒNƒgƒ‹ì¬
+//ï¿½Cï¿½Rï¿½ï¿½ï¿½Cï¿½Wï¿½ï¿½ï¿½Oï¿½pï¿½Xï¿½yï¿½Nï¿½gï¿½ï¿½ï¿½ì¬
 void createWaveSpec(double *x, int xLen, int fftl, int equLen, fft_complex **waveSpecgram)
 {
 	int i, j;
 
 	double *waveBuff;
-	fft_plan			wave_f_fft;				// fftƒZƒbƒg
-	fft_complex		*waveSpec;	// ƒXƒyƒNƒgƒ‹
+	fft_plan			wave_f_fft;				// fftï¿½Zï¿½bï¿½g
+	fft_complex		*waveSpec;	// ï¿½Xï¿½yï¿½Nï¿½gï¿½ï¿½
 	waveBuff = (double *)malloc(sizeof(double) * fftl);
 	waveSpec = (fft_complex *)malloc(sizeof(fft_complex) * fftl);
 	wave_f_fft = fft_plan_dft_r2c_1d(fftl, waveBuff, waveSpec, FFT_ESTIMATE);	
@@ -452,14 +453,14 @@ void createWaveSpec(double *x, int xLen, int fftl, int equLen, fft_complex **wav
 	for(i = 0;i < equLen;i++)
 	{
 		offset = i * fftl / 2;
-		//ƒf[ƒ^‚ğƒRƒs[
+		//ï¿½fï¿½[ï¿½^ï¿½ï¿½ï¿½Rï¿½sï¿½[
 		for(j = 0;j < fftl; j++) waveBuff[j] = x[offset + j] * 
-										(0.5 - 0.5 * cos(2.0*PI*(double)j/(double)fftl));//‘‹‚ğŠ|‚¯‚é;
+										(0.5 - 0.5 * cos(2.0*PI*(double)j/(double)fftl));//ï¿½ï¿½ï¿½ï¿½ï¿½|ï¿½ï¿½ï¿½ï¿½;
 
-		//fftÀs
+		//fftï¿½ï¿½ï¿½s
 		fft_execute(wave_f_fft);
 
-		//ƒXƒyƒNƒgƒ‹‚ğŠi”[
+		//ï¿½Xï¿½yï¿½Nï¿½gï¿½ï¿½ï¿½ï¿½ï¿½iï¿½[
 		for(j = 0;j < fftl/2+1; j++)
 		{
 			waveSpecgram[i][j][0] = waveSpec[j][0];
@@ -473,13 +474,13 @@ void createWaveSpec(double *x, int xLen, int fftl, int equLen, fft_complex **wav
 
 }
 
-//ƒXƒyƒNƒgƒ‹‚©‚ç”gŒ`‚ğÄ\’z
+//ï¿½Xï¿½yï¿½Nï¿½gï¿½ï¿½ï¿½ï¿½ï¿½ï¿½gï¿½`ï¿½ï¿½ï¿½Ä\ï¿½z
 void rebuildWave(double *x, int xLen, int fftl, int equLen, fft_complex **waveSpecgram)
 {
 	int i, j;
 	double *waveBuff;
-	fft_plan			wave_i_fft;				// fftƒZƒbƒg
-	fft_complex		*waveSpec;	// ƒXƒyƒNƒgƒ‹
+	fft_plan			wave_i_fft;				// fftï¿½Zï¿½bï¿½g
+	fft_complex		*waveSpec;	// ï¿½Xï¿½yï¿½Nï¿½gï¿½ï¿½
 	waveBuff = (double *)malloc(sizeof(double) * fftl);
 	waveSpec = (fft_complex *)malloc(sizeof(fft_complex) * fftl);
 	wave_i_fft = fft_plan_dft_c2r_1d(fftl, waveSpec, waveBuff, FFT_ESTIMATE);	
@@ -491,7 +492,7 @@ void rebuildWave(double *x, int xLen, int fftl, int equLen, fft_complex **waveSp
 	{
 		offset = i * fftl / 2;
 
-		//ƒXƒyƒNƒgƒ‹‚ğŠi”[
+		//ï¿½Xï¿½yï¿½Nï¿½gï¿½ï¿½ï¿½ï¿½ï¿½iï¿½[
 		for(j = 0;j < fftl/2+1; j++)
 		{
 			waveSpec[j][0] = waveSpecgram[i][j][0];
@@ -499,12 +500,12 @@ void rebuildWave(double *x, int xLen, int fftl, int equLen, fft_complex **waveSp
 		}
 
 
-		//fftÀs
+		//fftï¿½ï¿½ï¿½s
 		fft_execute(wave_i_fft);
 
 		for(j = 0;j < fftl; j++) waveBuff[j] /= fftl;
 
-		//ƒf[ƒ^‚ğƒRƒs[
+		//ï¿½fï¿½[ï¿½^ï¿½ï¿½ï¿½Rï¿½sï¿½[
 		for(j = 0;j < fftl; j++) x[offset + j]  += waveBuff[j]; 
 
 	}
@@ -515,31 +516,31 @@ void rebuildWave(double *x, int xLen, int fftl, int equLen, fft_complex **waveSp
 
 }
 
-//Bƒtƒ‰ƒOi‘§j‚ğ“K—p‚·‚é
+//Bï¿½tï¿½ï¿½ï¿½Oï¿½iï¿½ï¿½ï¿½jï¿½ï¿½Kï¿½pï¿½ï¿½ï¿½ï¿½
 void breath2(double *f0, int tLen, int fs, double *x, int xLen, fft_complex **waveSpecgram,int equLen, int fftl, int flag_B)
 {
 	int i, j;
 
-	//ƒmƒCƒYfft‚Ì€”õ
+	//ï¿½mï¿½Cï¿½Yfftï¿½Ìï¿½ï¿½ï¿½
 	double *noiseData;
 	double *noiseBuff;
 	double *noise;
-	fft_plan			noise_f_fft;				// fftƒZƒbƒg
-	fft_plan			noise_i_fft;				// fftƒZƒbƒg
-	fft_complex		*noiseSpec;	// ƒXƒyƒNƒgƒ‹
+	fft_plan			noise_f_fft;				// fftï¿½Zï¿½bï¿½g
+	fft_plan			noise_i_fft;				// fftï¿½Zï¿½bï¿½g
+	fft_complex		*noiseSpec;	// ï¿½Xï¿½yï¿½Nï¿½gï¿½ï¿½
 
 	noiseData = (double *)malloc(sizeof(double) * xLen);
 	for(i=0;i < xLen; i++) noiseData[i] = (double)rand()/RAND_MAX - 0.5;
 	noise = (double *)malloc(sizeof(double) * xLen);
 	for(i=0;i < xLen; i++) noise[i] = 0.0;
-//	for(i=0;i < xLen; i++) noiseData[i] *= noiseData[i] * (noiseData[i] < 0)? -1 : 1;//ƒmƒCƒY‚Ì•ª•z‚ğ‚¢‚¶‚é
+//	for(i=0;i < xLen; i++) noiseData[i] *= noiseData[i] * (noiseData[i] < 0)? -1 : 1;//ï¿½mï¿½Cï¿½Yï¿½Ì•ï¿½ï¿½zï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 	noiseBuff = (double *)malloc(sizeof(double) * fftl);
 	noiseSpec = (fft_complex *)malloc(sizeof(fft_complex) * fftl);
 	noise_f_fft = fft_plan_dft_r2c_1d(fftl, noiseBuff, noiseSpec, FFT_ESTIMATE);	
 	noise_i_fft = fft_plan_dft_c2r_1d(fftl, noiseSpec, noiseBuff, FFT_ESTIMATE);	
 
-	//wavefft‚Ì€”õ
-	fft_complex		*waveSpec;	// ƒXƒyƒNƒgƒ‹
+	//wavefftï¿½Ìï¿½ï¿½ï¿½
+	fft_complex		*waveSpec;	// ï¿½Xï¿½yï¿½Nï¿½gï¿½ï¿½
 	waveSpec = (fft_complex *)malloc(sizeof(fft_complex) * fftl);
 
 	int offset;
@@ -547,9 +548,9 @@ void breath2(double *f0, int tLen, int fs, double *x, int xLen, fft_complex **wa
 
 	int SFreq, MFreq, EFreq;
 
-	SFreq = (int)(fftl * 1500 / fs);//ƒuƒŒƒXŠJnü”g”
-	MFreq = (int)(fftl * 5000 / fs);//ƒuƒŒƒXŠJnü”g”
-	EFreq = (int)(fftl * 20000 / fs);//ƒuƒŒƒX‚Ìü”g”‘Ñ
+	SFreq = (int)(fftl * 1500 / fs);//ï¿½uï¿½ï¿½ï¿½Xï¿½Jï¿½nï¿½ï¿½ï¿½gï¿½ï¿½
+	MFreq = (int)(fftl * 5000 / fs);//ï¿½uï¿½ï¿½ï¿½Xï¿½Jï¿½nï¿½ï¿½ï¿½gï¿½ï¿½
+	EFreq = (int)(fftl * 20000 / fs);//ï¿½uï¿½ï¿½ï¿½Xï¿½Ìï¿½ï¿½gï¿½ï¿½ï¿½ï¿½
 
 	double nowIndex;
 	int sIndex, eIndex;
@@ -561,16 +562,16 @@ void breath2(double *f0, int tLen, int fs, double *x, int xLen, fft_complex **wa
 	for(i = 0; i < equLen; i++)
 	{
 		offset = i * fftl / 2;
-		//ƒf[ƒ^‚ğƒRƒs[
+		//ï¿½fï¿½[ï¿½^ï¿½ï¿½ï¿½Rï¿½sï¿½[
 		for(j = 0;j < fftl; j++) noiseBuff[j] = noiseData[offset + j] *
-										(0.5 - 0.5*cos(2.0*PI*(double)j/(double)fftl));//‘‹‚ğŠ|‚¯‚é;
+										(0.5 - 0.5*cos(2.0*PI*(double)j/(double)fftl));//ï¿½ï¿½ï¿½ï¿½ï¿½|ï¿½ï¿½ï¿½ï¿½;
 
-		//fftÀs
+		//fftï¿½ï¿½ï¿½s
 		fft_execute(noise_f_fft);
 
-		//ƒXƒyƒNƒgƒ‹•ï—i’´è”²‚«j
+		//ï¿½Xï¿½yï¿½Nï¿½gï¿½ï¿½ï¿½ï—ï¿½iï¿½ï¿½ï¿½è”²ï¿½ï¿½ï¿½j
 		for(j = 0;j < fftl/2+1; j++) waveSpec[j][0] = sqrt(waveSpecgram[i][j][0] * waveSpecgram[i][j][0] + waveSpecgram[i][j][1] * waveSpecgram[i][j][1]);
-		for(j = 0;j < fftl/2+1; j++) waveSpec[j][0] = log10(waveSpec[j][0]+0.00000001);//‘Î”‰»
+		for(j = 0;j < fftl/2+1; j++) waveSpec[j][0] = log10(waveSpec[j][0]+0.00000001);//ï¿½Îï¿½ï¿½ï¿½
 		for(j = 0;j < fftl/2+1; j++) waveSpec[j][1] = waveSpec[j][0];
 
 		nowIndex = max(0.0, min((double)tLen-1, (double)(offset + fftl / 2) / fs * 1000 / FRAMEPERIOD));
@@ -599,9 +600,9 @@ void breath2(double *f0, int tLen, int fs, double *x, int xLen, fft_complex **wa
 			hs = he;
 		}
 
-		for(j = 0;j < fftl/2+1; j++) waveSpec[j][0] = pow(10, waveSpec[j][0]);//U•‰»
+		for(j = 0;j < fftl/2+1; j++) waveSpec[j][0] = pow(10, waveSpec[j][0]);//ï¿½Uï¿½ï¿½ï¿½ï¿½
 
-		//ƒmƒCƒY‚ÌƒXƒyƒNƒgƒ‹‚ğ•ÏŒ`
+		//ï¿½mï¿½Cï¿½Yï¿½ÌƒXï¿½yï¿½Nï¿½gï¿½ï¿½ï¿½ï¿½ÏŒ`
 		for(j = 0;j < SFreq; j++)
 		{
 			noiseSpec[j][0] = 0.0;
@@ -630,26 +631,26 @@ void breath2(double *f0, int tLen, int fs, double *x, int xLen, fft_complex **wa
 		noiseSpec[0][1] = 0.0;
 		noiseSpec[fftl/2][1] = 0.0;
 
-		//‹tfft
+		//ï¿½tfft
 		fft_execute(noise_i_fft);
 		for(j = 0;j < fftl; j++) noiseBuff[j] /= fftl;
 		
-		//‘‹‚ğŠ|‚¯‚é
+		//ï¿½ï¿½ï¿½ï¿½ï¿½|ï¿½ï¿½ï¿½ï¿½
 	//	for(j = 0;j < fftl; j++) noiseBuff[j] *= 0.5 - 0.5*cos(2.0*PI*(double)j/(double)fftl);
 
-		//ƒmƒCƒY‚ğ‰Á‚¦‚é
+		//ï¿½mï¿½Cï¿½Yï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 		for(j = 0;j < fftl; j++)
 		{
 			noise[offset + j] += noiseBuff[j] * 0.2;
 		}
 	}
 	
-	//ƒmƒCƒY‚ğ‡¬
+	//ï¿½mï¿½Cï¿½Yï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 	double noiseRatio = max(0.0, (double)(flag_B - 50) / 50.0);
 	double waveRatio = 1 - noiseRatio;
 	for(i = 0;i < xLen;i++) x[i] = x[i] * waveRatio + noise[i] * noiseRatio;
 
-	//Œãˆ—
+	//ï¿½ãˆï¿½ï¿½
 	fft_destroy_plan(noise_f_fft);
 	fft_destroy_plan(noise_i_fft);
 	free(noise);
@@ -659,17 +660,17 @@ void breath2(double *f0, int tLen, int fs, double *x, int xLen, fft_complex **wa
 	free(waveSpec);
 }
 
-//Oƒtƒ‰ƒOiº‚Ì‹­‚³j
+//Oï¿½tï¿½ï¿½ï¿½Oï¿½iï¿½ï¿½ï¿½Ì‹ï¿½ï¿½ï¿½ï¿½j
 void Opening(double *f0, int tLen, int fs, fft_complex **waveSpecgram,int equLen, int fftl, int flag_O)
 {
 	int i, j;
 	double opn = (double) flag_O / 100.0;
-	int sFreq = (int)(fftl * 500 / fs);//§Œäü”g”1
-	int eFreq = (int)(fftl * 2000 / fs);//§Œäü”g”2
-	double sRatio = -10.0;//§Œäü”g”1‚ÌU•”{—¦ƒfƒVƒxƒ‹
-	double eRatio = 10.0;//§Œäü”g”2‚ÌU•”{—¦ƒfƒVƒxƒ‹
+	int sFreq = (int)(fftl * 500 / fs);//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½gï¿½ï¿½1
+	int eFreq = (int)(fftl * 2000 / fs);//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½gï¿½ï¿½2
+	double sRatio = -10.0;//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½gï¿½ï¿½1ï¿½ÌUï¿½ï¿½ï¿½{ï¿½ï¿½ï¿½fï¿½Vï¿½xï¿½ï¿½
+	double eRatio = 10.0;//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½gï¿½ï¿½2ï¿½ÌUï¿½ï¿½ï¿½{ï¿½ï¿½ï¿½fï¿½Vï¿½xï¿½ï¿½
 
-	//ü”g”‚²‚Æ‚Ì‰¹—Êƒ}ƒbƒvì¬
+	//ï¿½ï¿½ï¿½gï¿½ï¿½ï¿½ï¿½ï¿½Æ‚Ì‰ï¿½ï¿½Êƒ}ï¿½bï¿½vï¿½ì¬
 	double volume;
 	double *volumeMap;
 	volumeMap = (double *)malloc(sizeof(double) * fftl/2+1);
@@ -690,7 +691,7 @@ void Opening(double *f0, int tLen, int fs, fft_complex **waveSpecgram,int equLen
 		volumeMap[j] = volume;
 	}
 
-	//ü”g”‚²‚Æ‚Ì‰¹—Ê‚ğ•ÏX
+	//ï¿½ï¿½ï¿½gï¿½ï¿½ï¿½ï¿½ï¿½Æ‚Ì‰ï¿½ï¿½Ê‚ï¿½ÏX
 	int f0Frame;
 	for(i = 0;i < equLen;i++)
 	{
@@ -706,14 +707,14 @@ void Opening(double *f0, int tLen, int fs, fft_complex **waveSpecgram,int equLen
 	free(volumeMap);
 }
 
-//bƒtƒ‰ƒOiq‰¹i–³º•”j‹­’²j
+//bï¿½tï¿½ï¿½ï¿½Oï¿½iï¿½qï¿½ï¿½ï¿½iï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½jï¿½ï¿½ï¿½ï¿½ï¿½j
 void consonantAmp2(double *f0, double *volume, int tLen, int flag_b)
 {
 	int i;
-	int frameLen = 5;//•½ŠŠ‰»‚·‚éƒtƒŒ[ƒ€”i‘OŒãj
+	int frameLen = 5;//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½tï¿½ï¿½ï¿½[ï¿½ï¿½ï¿½ï¿½ï¿½iï¿½Oï¿½ï¿½j
 	int addCount = 0;
 	double addVolume = 0;
-	double ratio = (double) flag_b / 20.0; //”{—¦@b=100 ‚Ì‚Æ‚«5”{
+	double ratio = (double) flag_b / 20.0; //ï¿½{ï¿½ï¿½ï¿½@b=100 ï¿½Ì‚Æ‚ï¿½5ï¿½{
 
 	for(i = 0;i < min(tLen, frameLen+1); i++)
 	{
@@ -737,7 +738,7 @@ void consonantAmp2(double *f0, double *volume, int tLen, int flag_b)
 	}
 }
 
-//gƒtƒ‰ƒOiƒWƒFƒ“ƒ_[ƒtƒ@ƒNƒ^[‚à‚Ç‚«j‚ğ“K—p‚·‚é
+//gï¿½tï¿½ï¿½ï¿½Oï¿½iï¿½Wï¿½Fï¿½ï¿½ï¿½_ï¿½[ï¿½tï¿½@ï¿½Nï¿½^ï¿½[ï¿½ï¿½ï¿½Ç‚ï¿½ï¿½jï¿½ï¿½Kï¿½pï¿½ï¿½ï¿½ï¿½
 void gFactor(int pCount, int fftl, double **residualSpecgram, int *residualSpecgramLength, double gRatio)
 {
 	int i, j;
@@ -778,8 +779,8 @@ void gFactor(int pCount, int fftl, double **residualSpecgram, int *residualSpecg
 	}
 }
 
-//gƒtƒ‰ƒO‚É‚æ‚è•Ï‰»‚µ‚½ƒmƒCƒY•”•ª‚ÌüŠú‚ğ•â³iF0‚ğüŠú‚É‡‚í‚¹‚éj
-//ƒmƒCƒY•”•ª‚ÌF0‚ª0.0‚Å‚Í‚È‚­‚È‚é‚½‚ßAsynthesisPt101‚Ì’¼‘O‚ÉÀs‚·‚é
+//gï¿½tï¿½ï¿½ï¿½Oï¿½É‚ï¿½ï¿½Ï‰ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½mï¿½Cï¿½Yï¿½ï¿½ï¿½ï¿½ï¿½Ìï¿½ï¿½ï¿½ï¿½ï¿½â³ï¿½iF0ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Éï¿½ï¿½í‚¹ï¿½ï¿½j
+//ï¿½mï¿½Cï¿½Yï¿½ï¿½ï¿½ï¿½ï¿½ï¿½F0ï¿½ï¿½0.0ï¿½Å‚Í‚È‚ï¿½ï¿½È‚é‚½ï¿½ßAsynthesisPt101ï¿½Ì’ï¿½ï¿½Oï¿½Éï¿½ï¿½sï¿½ï¿½ï¿½ï¿½
 void f0FixG(double *f0, int tLen2, double gRatio)
 {
 	int i;
@@ -792,11 +793,11 @@ void f0FixG(double *f0, int tLen2, double gRatio)
 	}
 }
 
-//f0—ñ‚ÉƒmƒCƒY‚ğ‰Á‚¦‚é
+//f0ï¿½ï¿½Éƒmï¿½Cï¿½Yï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 void f0Noise(double *f0, int tLen, double f0Rand)
 {
 	int i, j;
-	int Pit = 1;//(int)(5 / FRAMEPERIOD + 0.5);//ƒsƒbƒ`•ÏXŠÔŠu‚ÌƒtƒŒ[ƒ€” 50ms
+	int Pit = 1;//(int)(5 / FRAMEPERIOD + 0.5);//ï¿½sï¿½bï¿½`ï¿½ÏXï¿½ÔŠuï¿½Ìƒtï¿½ï¿½ï¿½[ï¿½ï¿½ï¿½ï¿½ 50ms
 	double sRand, eRand;
 	double NowRand;
 
@@ -819,14 +820,14 @@ void f0Noise(double *f0, int tLen, double f0Rand)
 		i += j;
 	}
 }
-//ü”g”‚ğƒsƒbƒ`‚É•ÏŠ·
+//ï¿½ï¿½ï¿½gï¿½ï¿½ï¿½ï¿½ï¿½sï¿½bï¿½`ï¿½É•ÏŠï¿½
 
 double FrqToPit(double Frq)
 {
 	return log(Frq / 220) * 1.44269504088896 * 1200 + 5700;
 }
 
-//Aƒtƒ‰ƒOiƒsƒbƒ`•Ï‰»‚É‡‚í‚¹‚Ä‰¹—Ê‚ğC³j
+//Aï¿½tï¿½ï¿½ï¿½Oï¿½iï¿½sï¿½bï¿½`ï¿½Ï‰ï¿½ï¿½Éï¿½ï¿½í‚¹ï¿½Ä‰ï¿½ï¿½Ê‚ï¿½ï¿½Cï¿½ï¿½ï¿½j
 void autoVolume(double *f0, int tLen, int fs, double *volume, int flag_A)
 {
 	int i;
@@ -867,6 +868,95 @@ void autoVolume(double *f0, int tLen, int fs, double *volume, int flag_A)
 	if(f0[tLen-1] != 0.0 && f0[tLen-2] != 0.0) volume[tLen-1] = volume[tLen-2];
 }
 
+static int getLoudnessNormalizationFlag(int argc, char **argv)
+{
+	int flag_P = 0;
+	if(argc > 5 && argv != NULL && argv[5] != NULL)
+	{
+		char *cp = strchr(argv[5], 'P');
+		if(cp != NULL)
+		{
+			sscanf(cp + 1, "%d", &flag_P);
+			flag_P = max(0, min(100, flag_P));
+		}
+	}
+	return flag_P;
+}
+
+static double calculateActiveRms(const double *signal, int length,
+                                 double threshold)
+{
+	if(signal == NULL || length <= 0)
+		return 0.0;
+
+	double energy = 0.0;
+	int count = 0;
+	for(int i = 0; i < length; i++)
+	{
+		if(fabs(signal[i]) >= threshold)
+		{
+			energy += signal[i] * signal[i];
+			count++;
+		}
+	}
+	return count > 0 ? sqrt(energy / (double)count) : 0.0;
+}
+
+/*
+ * P is an optional, approximate loudness normalizer. The original
+ * resampler already applies a conservative peak scaling to every note, so
+ * a plain extra gain would be cancelled by that scaling. P therefore moves
+ * the active RMS toward a common target and permits a little more peak
+ * headroom. P0 preserves the historical output path.
+ */
+static void applyLoudnessNormalization(double *signal, int length,
+                                        double volume, int strength)
+{
+	if(signal == NULL || length <= 0 || strength <= 0 ||
+	   volume <= 0.0)
+		return;
+
+	double peak = 0.0;
+	for(int i = 0; i < length; i++)
+		peak = max(peak, fabs(signal[i]));
+	if(peak <= 1.0e-9)
+		return;
+
+	double threshold = peak * 0.05;
+	double activeRms = calculateActiveRms(signal, length, threshold);
+	if(activeRms <= 1.0e-9)
+		return;
+
+	/*
+	 * The baseline output peak is 0.5 * volume. A target RMS of 0.15 *
+	 * volume is deliberately conservative: it raises thin/noisy notes
+	 * without trying to make every note as loud as a clipped square wave.
+	 */
+	double targetRms = 0.15 * volume;
+	double desiredGain = targetRms / activeRms;
+	desiredGain = max(0.35, min(3.0, desiredGain));
+	double amount = (double)strength / 100.0;
+	double gain = exp(log(desiredGain) * amount);
+	for(int i = 0; i < length; i++)
+		signal[i] *= gain;
+
+	/*
+	 * Keep the output below a safe limit. The limit grows with P so the
+	 * normalizer can actually make a low-crest-factor note louder, while
+	 * still leaving headroom for OpenUtau's later mixing stage.
+	 */
+	double safePeak = volume * (0.5 + 0.45 * amount);
+	double newPeak = 0.0;
+	for(int i = 0; i < length; i++)
+		newPeak = max(newPeak, fabs(signal[i]));
+	if(newPeak > safePeak && newPeak > 1.0e-9)
+	{
+		double limiterGain = safePeak / newPeak;
+		for(int i = 0; i < length; i++)
+			signal[i] *= limiterGain;
+	}
+}
+
 int main(int argc, char *argv[])
 {
 	int i;
@@ -883,7 +973,7 @@ int main(int argc, char *argv[])
 
 	if(argc < 3) 
 	{
-		printf("error: ˆø”‚Ì”‚ª•s³‚Å‚·D\n");
+		printf("error: ï¿½ï¿½ï¿½ï¿½ï¿½Ìï¿½ï¿½ï¿½ï¿½sï¿½ï¿½ï¿½Å‚ï¿½ï¿½D\n");
 		return 0;
 	}
 
@@ -893,29 +983,29 @@ int main(int argc, char *argv[])
 		printf("%s\n", argv[i]);
 	//*/
 
-	//Flags“Ç
+	//Flagsï¿½Çï¿½
 	char *cp;
-	int flag_B = 50;//BREi‘§j¬•ª
+	int flag_B = 50;//BREï¿½iï¿½ï¿½ï¿½jï¿½ï¿½ï¿½ï¿½
 	if(argc > 5 && (cp = strchr(argv[5],'B')) != 0)
 	{
 		sscanf(cp+1, "%d", &flag_B);
 		flag_B = max(0, min(100, flag_B));
 	}
 
-	int flag_b = 0;//q‰¹i–³º•”j‚Ì‹­‚³
+	int flag_b = 0;//ï¿½qï¿½ï¿½ï¿½iï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½jï¿½Ì‹ï¿½ï¿½ï¿½
 	if(argc > 5 && (cp = strchr(argv[5],'b')) != 0)
 	{
 		sscanf(cp+1, "%d", &flag_b);
 		flag_b = max(0, min(100, flag_b));
 	}
 
-	int flag_t = 0;//tƒtƒ‰ƒO
+	int flag_t = 0;//tï¿½tï¿½ï¿½ï¿½O
 	if(argc > 5 && (cp = strchr(argv[5],'t')) != 0)
 	{
 		sscanf(cp+1, "%d", &flag_t);
 	}
 
-	double flag_g = 0.0;//gƒtƒ‰ƒO
+	double flag_g = 0.0;//gï¿½tï¿½ï¿½ï¿½O
 	double gRatio;
 	if(argc > 5 && (cp = strchr(argv[5],'g')) != 0)
 	{
@@ -925,7 +1015,7 @@ int main(int argc, char *argv[])
 	}
 	gRatio = pow(10, -flag_g / 200);
 
-	double flag_W = 0.0;//Wƒtƒ‰ƒOiü”g”‹­§İ’èjF<0–³º‰¹  F=0–³Œø  50>=F<=1000 w’è‚Ìü”g”‚Éİ’è 
+	double flag_W = 0.0;//Wï¿½tï¿½ï¿½ï¿½Oï¿½iï¿½ï¿½ï¿½gï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½İ’ï¿½jF<0ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½  F=0ï¿½ï¿½ï¿½ï¿½  50>=F<=1000 ï¿½wï¿½ï¿½Ìï¿½ï¿½gï¿½ï¿½ï¿½Éİ’ï¿½ 
 	double f0Rand = 0;
 	int hasFlag_W = 0;
 	if(argc > 5 && (cp = strchr(argv[5],'W')) != 0)
@@ -937,32 +1027,41 @@ int main(int argc, char *argv[])
 		if (flag_W < 0) flag_W = -1;
 	}
 	if(!hasFlag_W) flag_W = -1;
-	int flag_d = 5;//“Æ©ƒtƒ‰ƒO@DIO‚ÌF0•ªÍŒ‹‰Ê‚ÉLPF‚ğ‚©‚¯‚é 0~20 def 5
-//	if(argc > 5 && (cp = strchr(argv[5],'d')) != 0) //ƒfƒtƒHƒ‹ƒg‚©‚ç•ÏX‚·‚é•K—v‚ª–³‚¢‚ÆŠ´‚¶‚½‚Ì‚Å‚Æ‚è‚ ‚¦‚¸–³Œø
+	int flag_d = 5;//ï¿½Æï¿½ï¿½tï¿½ï¿½ï¿½Oï¿½@DIOï¿½ï¿½F0ï¿½ï¿½ï¿½ÍŒï¿½ï¿½Ê‚ï¿½LPFï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ 0~20 def 5
+//	if(argc > 5 && (cp = strchr(argv[5],'d')) != 0) //ï¿½fï¿½tï¿½Hï¿½ï¿½ï¿½gï¿½ï¿½ï¿½ï¿½ÏXï¿½ï¿½ï¿½ï¿½Kï¿½vï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ÆŠï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ì‚Å‚Æ‚è‚ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 //	{
 //		sscanf(cp+1, "%d", &flag_d);
 //		flag_d = max(0, min(20, flag_d));
 //	}
 
-	int flag_A = 0;//“Æ©ƒtƒ‰ƒO@ƒsƒbƒ`•Ï‰»‚É‡‚í‚¹‚Ä‰¹—Ê‚ğC³
+	int flag_A = 0;//ï¿½Æï¿½ï¿½tï¿½ï¿½ï¿½Oï¿½@ï¿½sï¿½bï¿½`ï¿½Ï‰ï¿½ï¿½Éï¿½ï¿½í‚¹ï¿½Ä‰ï¿½ï¿½Ê‚ï¿½ï¿½Cï¿½ï¿½
 	if(argc > 5 && (cp = strchr(argv[5],'A')) != 0)
 	{
 		sscanf(cp+1, "%d", &flag_A);
 		flag_A = max(0, min(100, flag_A));
 	}
 
-	int flag_O = 0;//“Æ©ƒtƒ‰ƒO@º‚Ì‹­‚³
+	int flag_O = 0;//ï¿½Æï¿½ï¿½tï¿½ï¿½ï¿½Oï¿½@ï¿½ï¿½ï¿½Ì‹ï¿½ï¿½ï¿½
 	if(argc > 5 && (cp = strchr(argv[5],'O')) != 0)
 	{
 		sscanf(cp+1, "%d", &flag_O);
 		flag_O = max(-100, min(100, flag_O));
 	}
 
-	int flag_e = 0;//“Æ©ƒtƒ‰ƒO@ˆø‚«L‚Î‚µ•û–@‚ğ•ÏX‚·‚é@ƒfƒtƒHƒ‹ƒg‚Íƒ‹[ƒv®‚¾‚ªAw’è‚·‚é‚ÆUTAU‚Æ“¯‚¶‚æ‚¤‚Éˆø‚«L‚Î‚·
-	if(argc > 5 && (cp = strchr(argv[5],'e')) != 0)
+	int flag_e = 0;//ï¿½Æï¿½ï¿½tï¿½ï¿½ï¿½Oï¿½@ï¿½ï¿½ï¿½ï¿½ï¿½Lï¿½Î‚ï¿½ï¿½ï¿½ï¿½@ï¿½ï¿½ÏXï¿½ï¿½ï¿½ï¿½@ï¿½fï¿½tï¿½Hï¿½ï¿½ï¿½gï¿½Íƒï¿½ï¿½[ï¿½vï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Aï¿½wï¿½è‚·ï¿½ï¿½ï¿½UTAUï¿½Æ“ï¿½ï¿½ï¿½ï¿½æ‚¤ï¿½Éˆï¿½ï¿½ï¿½ï¿½Lï¿½Î‚ï¿½
+	if(argc > 5 && argv[5] != NULL)
 	{
-		flag_e = 1;
+		for(int flagIndex = 0; argv[5][flagIndex] != '\0'; flagIndex++)
+		{
+			if(argv[5][flagIndex] == 'e' &&
+			   (flagIndex == 0 || argv[5][flagIndex - 1] != 'h'))
+			{
+				flag_e = 1;
+				break;
+			}
+		}
 	}
+	int flag_P = getLoudnessNormalizationFlag(argc, argv);
 
 
 
@@ -980,23 +1079,25 @@ int main(int argc, char *argv[])
 
 	if(x == NULL)
 	{
-		printf("error: w’è‚³‚ê‚½ƒtƒ@ƒCƒ‹‚Í‘¶İ‚µ‚Ü‚¹‚ñD\n");
+		printf("error: ï¿½wï¿½è‚³ï¿½ê‚½ï¿½tï¿½@ï¿½Cï¿½ï¿½ï¿½Í‘ï¿½ï¿½İ‚ï¿½ï¿½Ü‚ï¿½ï¿½ï¿½D\n");
 		return 0;
 	}
+
+	setHarmonicSource(x, signalLen, fs, offset);
 
 	printf("File information\n");
 	printf("Sampling : %d Hz %d Bit\n", fs, nbit);
 	printf("Length %d [sample]\n", signalLen);
 	printf("Length %f [sec]\n", (double)signalLen/(double)fs);
 
-	// F0‚Í‰½ƒTƒ“ƒvƒ‹•ª‚ ‚é‚©‚ğ–‘O‚ÉŒvZ‚·‚éD
+	// F0ï¿½Í‰ï¿½ï¿½Tï¿½ï¿½ï¿½vï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½é‚©ï¿½ï¿½ï¿½ï¿½ï¿½Oï¿½ÉŒvï¿½Zï¿½ï¿½ï¿½ï¿½D
 	tLen = getSamplesForDIO(fs, signalLen, FRAMEPERIOD);
 	f0 = (double *)malloc(sizeof(double)*tLen);
 	t  = (double *)malloc(sizeof(double)*tLen);
 	// f0 estimation by DIO
 	DWORD elapsedTime;
 	
-	if(flag_W == 0)//Fƒtƒ‰ƒO@f0 ‹­§İ’è
+	if(flag_W == 0)//Fï¿½tï¿½ï¿½ï¿½Oï¿½@f0 ï¿½ï¿½ï¿½ï¿½ï¿½İ’ï¿½
 	{
 		printf("\nAnalysis\n");
 		elapsedTime = timeGetTime();
@@ -1006,7 +1107,7 @@ int main(int argc, char *argv[])
 
 
 //		F0ToFile(f0, tLen);
-		//F0‚ÌLPF  
+		//F0ï¿½ï¿½LPF  
 		if (flag_d !=0)
 		{
 			f0Lpf(f0, tLen, flag_d);
@@ -1025,37 +1126,37 @@ int main(int argc, char *argv[])
 	
 	fftl = getFFTLengthForStar(fs);
 
-	// ”ñüŠú«w•W‚Ì•ªÍ
+	// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½wï¿½Wï¿½Ì•ï¿½ï¿½ï¿½
 	elapsedTime = timeGetTime();
 	residualSpecgramIndex = (int *)malloc(sizeof(int) * tLen);
 
 	pCount = pt101(x, signalLen, fs, t, f0, &residualSpecgram, &residualSpecgramLength, residualSpecgramIndex);
 	printf("PLATINUM: %d [msec]\n", timeGetTime() - elapsedTime);
 
-//Flag_g“K—p
+//Flag_gï¿½Kï¿½p
 	if(flag_g != 0)
 	{
 		 gFactor(pCount, fftl, residualSpecgram, residualSpecgramLength, gRatio);
 	}
 
-	//‘‹‚ğ‚©‚¯‚é
+	//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 	PulseResidualWindow(residualSpecgram, residualSpecgramLength, pCount);
 
-	// ŠÔ’·‚ÌLk
+	// ï¿½ï¿½ï¿½Ô’ï¿½ï¿½ÌLï¿½k
 	int lengthMsec, stLengthMsec, /*edLengthMsec,*/ inputLengthMsec;
 	double velocity;
 	double vRatio;
 
-	inputLengthMsec = (int)(tLen*FRAMEPERIOD);//Œ´‰¹‚Ìg—p‰Â”\‚È’·‚³
-	lengthMsec = atoi(argv[7]);               //—v‹’·
-	stLengthMsec = atoi(argv[8]);             //q‰¹•”
-	velocity = (double)atoi(argv[4]);         //q‰¹‘¬“x 
-	vRatio = pow(2.0, (1.0 - (velocity / 100.0))); //q‰¹Lk—¦
+	inputLengthMsec = (int)(tLen*FRAMEPERIOD);//ï¿½ï¿½ï¿½ï¿½ï¿½Ìgï¿½pï¿½Â”\ï¿½È’ï¿½ï¿½ï¿½
+	lengthMsec = atoi(argv[7]);               //ï¿½vï¿½ï¿½ï¿½ï¿½
+	stLengthMsec = atoi(argv[8]);             //ï¿½qï¿½ï¿½ï¿½ï¿½
+	velocity = (double)atoi(argv[4]);         //ï¿½qï¿½ï¿½ï¿½ï¿½ï¿½x 
+	vRatio = pow(2.0, (1.0 - (velocity / 100.0))); //ï¿½qï¿½ï¿½ï¿½Lï¿½kï¿½ï¿½
 
-	// §Œäƒpƒ‰ƒƒ^‚Ìƒƒ‚ƒŠŠm•Û
+	// ï¿½ï¿½ï¿½ï¿½pï¿½ï¿½ï¿½ï¿½ï¿½^ï¿½Ìƒï¿½ï¿½ï¿½ï¿½ï¿½ï¿½mï¿½ï¿½
 	double *fixedF0;
 	int *fixedResidualSpecgramIndex;
-	double *fixedVolume;         //ƒtƒŒ[ƒ€’PˆÊ‚Ìƒ{ƒŠƒ…[ƒ€
+	double *fixedVolume;         //ï¿½tï¿½ï¿½ï¿½[ï¿½ï¿½ï¿½Pï¿½Ê‚Ìƒ{ï¿½ï¿½ï¿½ï¿½ï¿½[ï¿½ï¿½
 
 	int tLen2;
 
@@ -1065,7 +1166,7 @@ int main(int argc, char *argv[])
 	fixedResidualSpecgramIndex	= (int *) malloc(sizeof(int) * tLen2);
 	fixedVolume	= (double *) malloc(sizeof(double) * tLen2);
 
-	// ÅI”gŒ`‚Ìƒƒ‚ƒŠŠm•Û
+	// ï¿½ÅIï¿½gï¿½`ï¿½Ìƒï¿½ï¿½ï¿½ï¿½ï¿½ï¿½mï¿½ï¿½
 	int signalLen2;
 	signalLen2 = (int)((lengthMsec       )/1000.0*(double)fs);
 	y  = (double *)malloc(sizeof(double)*signalLen2);
@@ -1074,10 +1175,10 @@ int main(int argc, char *argv[])
 //	printf("%d, %d, %d\n",lengthMsec, offset, fs);
 
 
-	// ‡¬‚Ì‘O‚ÉF0‚Ì‘€ì (ˆø”)
+	// ï¿½ï¿½ï¿½ï¿½ï¿½Ì‘Oï¿½ï¿½F0ï¿½Ì‘ï¿½ï¿½ï¿½ (ï¿½ï¿½ï¿½ï¿½)
 	equalizingPicth(f0, tLen, argv[3], atoi(argv[11]), flag_t );
 
-	//ŠÔLk
+	//ï¿½ï¿½ï¿½ÔLï¿½k
 	int os, st, ed;
 	os = offset;
 	st = stLengthMsec + offset;
@@ -1090,6 +1191,7 @@ int main(int argc, char *argv[])
 	int loopEdFrame = min(ed / (int)FRAMEPERIOD, tLen - 1);
 	int loopForwardLength = loopEdFrame - loopStFrame - 2;
 	int preLoopFrameCount = (int)((loopStFrame - loopOsFrame) * vRatio + 0.5);
+	setHarmonicOutputBoundary((int)(stLengthMsec * vRatio + 0.5));
 	if(loopForwardLength >= 2 && preLoopFrameCount >= 0 &&
 	   preLoopFrameCount < tLen2)
 	{
@@ -1107,7 +1209,7 @@ int main(int argc, char *argv[])
 			os/(int)FRAMEPERIOD, st/(int)FRAMEPERIOD, min(ed/(int)FRAMEPERIOD, tLen-1),
 			lengthMsec, vRatio, flag_e);
 
-	//ƒsƒbƒ`ƒxƒ“ƒh“K—p world4utau‚Ìˆ—‚ğ—¬—p
+	//ï¿½sï¿½bï¿½`ï¿½xï¿½ï¿½ï¿½hï¿½Kï¿½p world4utauï¿½Ìï¿½ï¿½ï¿½ï¿½ğ—¬—p
 	int *pit = NULL;
 	double tempo = 120;
 	int pLen = tLen2;
@@ -1142,25 +1244,25 @@ int main(int argc, char *argv[])
 	}
 //	createFinalPitch(fixedF0, tLen2, pitchBend, bLen, signalLen2, offset, fs, tempo);
 
-	//Wƒtƒ‰ƒO‚Ìƒsƒbƒ`ƒmƒCƒY@@ƒfƒXƒ{ƒCƒX‰»‚ğ–Ú˜_‚ñ‚¾‚ª‚¤‚Ü‚­‚¢‚©‚È‚¢
+	//Wï¿½tï¿½ï¿½ï¿½Oï¿½Ìƒsï¿½bï¿½`ï¿½mï¿½Cï¿½Yï¿½@ï¿½@ï¿½fï¿½Xï¿½{ï¿½Cï¿½Xï¿½ï¿½ï¿½ï¿½Ú˜_ï¿½ñ‚¾‚ï¿½ï¿½ï¿½ï¿½Ü‚ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½È‚ï¿½
 //	if(f0Rand != 0.0)
 //	{
 //		f0Noise(fixedF0, tLen2, f0Rand);
 
 //	}
-	//Aƒtƒ‰ƒO“K—p
+	//Aï¿½tï¿½ï¿½ï¿½Oï¿½Kï¿½p
 	autoVolume(fixedF0, tLen2, fs, fixedVolume, flag_A);
 
-	//bƒtƒ‰ƒO
+	//bï¿½tï¿½ï¿½ï¿½O
 	if(flag_b != 0)
 	{
 		consonantAmp2(fixedF0, fixedVolume, tLen2, flag_b);
 	}
 
-	//gƒtƒ‰ƒO‚É‚æ‚è•s®‡‚Æ‚È‚Á‚½–³º•”‚ÌüŠú‚ÆF0‚Ì‚Â‚¶‚Â‚Ü‚ğ‡‚í‚¹‚é
+	//gï¿½tï¿½ï¿½ï¿½Oï¿½É‚ï¿½ï¿½sï¿½ï¿½ï¿½ï¿½ï¿½Æ‚È‚ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ìï¿½ï¿½ï¿½ï¿½ï¿½F0ï¿½Ì‚Â‚ï¿½ï¿½Â‚Ü‚ï¿½ï¿½ï¿½ï¿½í‚¹ï¿½ï¿½
 	double fixedDefault_f0 = DEFAULT_F0 * gRatio;
 
-	// ‡¬
+	// ï¿½ï¿½ï¿½ï¿½
 	printf("\nSynthesis\n");
 	elapsedTime = timeGetTime();
 	synthesisPt101(fixedDefault_f0, fixedF0, tLen2, residualSpecgram, residualSpecgramLength, fixedResidualSpecgramIndex,
@@ -1169,52 +1271,63 @@ int main(int argc, char *argv[])
 
 	printf("WORLD: %d [msec]\n", timeGetTime() - elapsedTime);
 
-	//ƒCƒRƒ‰ƒCƒWƒ“ƒO
-	int equfftL = 1024;//ƒCƒRƒ‰ƒCƒU[‚Ìfft’·
-	int equLen = (signalLen2 / (equfftL/2)) - 1; //ŒJ‚è•Ô‚µ‰ñ”
-	fft_complex **waveSpecgram;  //ƒXƒyƒNƒgƒ‹
+	//ï¿½Cï¿½Rï¿½ï¿½ï¿½Cï¿½Wï¿½ï¿½ï¿½O
+	int equfftL = 1024;//ï¿½Cï¿½Rï¿½ï¿½ï¿½Cï¿½Uï¿½[ï¿½ï¿½fftï¿½ï¿½
+	int equLen = (signalLen2 / (equfftL/2)) - 1; //ï¿½Jï¿½ï¿½Ô‚ï¿½ï¿½ï¿½
+	fft_complex **waveSpecgram;  //ï¿½Xï¿½yï¿½Nï¿½gï¿½ï¿½
 	waveSpecgram = (fft_complex **)malloc(sizeof(fft_complex *) * equLen);
 	for(i = 0;i < equLen;i++) waveSpecgram[i] = (fft_complex *)malloc(sizeof(fft_complex) * (equfftL/2+1));
 
-	//ƒXƒyƒNƒgƒ‹ì¬
+	//ï¿½Xï¿½yï¿½Nï¿½gï¿½ï¿½ï¿½ì¬
 	if(flag_B > 50 || flag_O != 0)
 	{
 		createWaveSpec(y, signalLen2, equfftL, equLen, waveSpecgram);
 	}
 
-	//º‚Ì‹­‚³
+	//ï¿½ï¿½ï¿½Ì‹ï¿½ï¿½ï¿½
 	if(flag_O != 0)
 	{
 		Opening(fixedF0, tLen2, fs, waveSpecgram, equLen, equfftL, flag_O);
 	}
 
-	//ƒCƒRƒ‰ƒCƒYŒ‹‰Ê‚ğ”gŒ`‚É”½‰f
+	//ï¿½Cï¿½Rï¿½ï¿½ï¿½Cï¿½Yï¿½ï¿½ï¿½Ê‚ï¿½gï¿½`ï¿½É”ï¿½ï¿½f
 	if(flag_O != 0)
 	{
 		rebuildWave(y, signalLen2, equfftL, equLen, waveSpecgram);
 	}
 
-	//ƒmƒCƒY
+	//ï¿½mï¿½Cï¿½Y
 	if(flag_B > 50)
 	{
 		 breath2(fixedF0, tLen2, fs, y, signalLen2, waveSpecgram, equLen, equfftL, flag_B);
 	}
 
-	// ƒIƒtƒZƒbƒg‚Ìİ’è
+	// ï¿½Iï¿½tï¿½Zï¿½bï¿½gï¿½Ìİ’ï¿½
 //	signalLen2 = (int)((lengthMsec)/1000.0*(double)fs);
 
-	// ƒtƒ@ƒCƒ‹‚Ì‘‚«o‚µ (“à—e‚É‚ÍŠÖŒW‚È‚¢‚æ)
+	// ï¿½tï¿½@ï¿½Cï¿½ï¿½ï¿½Ìï¿½ï¿½ï¿½ï¿½oï¿½ï¿½ (ï¿½ï¿½ï¿½eï¿½É‚ÍŠÖŒWï¿½È‚ï¿½ï¿½ï¿½)
 	char header[44];
 	short *output;
 	double maxAmp;
 	output = (short *)malloc(sizeof(short) * signalLen2);
  
-	// U•‚Ì³‹K‰»
+	// ï¿½Uï¿½ï¿½ï¿½Ìï¿½ï¿½Kï¿½ï¿½
 	maxAmp = 0.0;
 	double volume;
 	volume = (double)atoi(argv[10]) / 100.0;
 	for(i = 0;i < signalLen2;i++) maxAmp = maxAmp < fabs(y[i]) ? fabs(y[i]) : maxAmp;
-	for(i = 0;i < signalLen2;i++) output[i] = (short)(32768.0*(y[i]*0.5 * volume/maxAmp));
+	if(maxAmp > 1.0e-12)
+	{
+		double baseGain = 0.5 * volume / maxAmp;
+		for(i = 0;i < signalLen2;i++) y[i] *= baseGain;
+		applyLoudnessNormalization(y, signalLen2, volume, flag_P);
+		for(i = 0;i < signalLen2;i++)
+			output[i] = (short)(32768.0 * y[i]);
+	}
+	else
+	{
+		for(i = 0;i < signalLen2;i++) output[i] = 0;
+	}
 
 	fp = fopen(argv[1], "rb");
 size_t result =
@@ -1222,11 +1335,11 @@ size_t result =
 assert(result == 22);
 	fclose(fp);
 
-	*((short int*)(&header[22])) = 1;		//channels	 	2 	ƒ`ƒƒƒ“ƒlƒ‹”
-	*((int*)(&header[24])) = fs;			//samplerate 	4 	ƒTƒ“ƒvƒ‹”/•b
-	*((int*)(&header[28])) = fs * nbit / 8;	//bytepersec 	4 	ƒoƒCƒg”/•b
-	*((short int*)(&header[32])) = nbit / 8;//blockalign 	2 	ƒoƒCƒg”/ƒuƒƒbƒN
-	*((short int*)(&header[34])) = nbit;	//bitswidth 	2 	ƒrƒbƒg”/ƒTƒ“ƒvƒ‹
+	*((short int*)(&header[22])) = 1;		//channels	 	2 	ï¿½`ï¿½ï¿½ï¿½ï¿½ï¿½lï¿½ï¿½ï¿½ï¿½
+	*((int*)(&header[24])) = fs;			//samplerate 	4 	ï¿½Tï¿½ï¿½ï¿½vï¿½ï¿½ï¿½ï¿½/ï¿½b
+	*((int*)(&header[28])) = fs * nbit / 8;	//bytepersec 	4 	ï¿½oï¿½Cï¿½gï¿½ï¿½/ï¿½b
+	*((short int*)(&header[32])) = nbit / 8;//blockalign 	2 	ï¿½oï¿½Cï¿½gï¿½ï¿½/ï¿½uï¿½ï¿½ï¿½bï¿½N
+	*((short int*)(&header[34])) = nbit;	//bitswidth 	2 	ï¿½rï¿½bï¿½gï¿½ï¿½/ï¿½Tï¿½ï¿½ï¿½vï¿½ï¿½
 
 	header[36] = 'd'; header[37] = 'a'; header[38] = 't'; header[39] = 'a';
 

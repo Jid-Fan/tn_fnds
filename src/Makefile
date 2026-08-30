@@ -1,6 +1,6 @@
 OBJS = dio.o frq.o matlabfunctions.o platinum.o star.o synthesis_w1.o test.o fft.o wavread.o pitch_shift_rb.o ../vendor/rubberband-3.3.0/single/RubberBandSingle.o
 CXX = g++
-CFLAGS = -O -msse3 -std=c++11
+CFLAGS = -O2 -msse3 -std=c++11
 INCLUDES = -I. -I../vendor/rubberband-3.3.0
 LIBS = 
 

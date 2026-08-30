@@ -45,14 +45,59 @@ expressions:
     is_flag: true
     flag: mt
   high_quality:
-    name: Alternative Continuous Pitch Shift
+    name: Pitch-Shift Algorithm (0=legacy, 1=full, 2=extreme-vocal hybrid)
     abbr: Qual
     type: Numerical
     min: 0
-    max: 1
+    max: 2
     default_value: 0
     is_flag: true
     flag: hq
+  harmonic_cleaning:
+    name: Harmonic Cleaning (stable vowel region)
+    abbr: Harm
+    type: Numerical
+    min: 0
+    max: 100
+    default_value: 0
+    is_flag: true
+    flag: hs
+  harmonic_emphasis:
+    name: Emphasize Nearby Harmonic Peaks (no added harmonics)
+    abbr: HEmph
+    type: Numerical
+    min: 0
+    max: 100
+    default_value: 0
+    is_flag: true
+    flag: he
+  harmonic_force:
+    name: Force a Melodic Harmonic Layer (experimental)
+    abbr: HForce
+    type: Numerical
+    min: 0
+    max: 100
+    default_value: 0
+    is_flag: true
+    flag: hf
+  harmonic_onset_offset:
+    name: Harmonic Cleaning Onset Offset (ms)
+    abbr: HOff
+    type: Numerical
+    min: -2000
+    max: 2000
+    default_value: 0
+    is_flag: true
+    flag: ho
+  loudness_normalization:
+    name: Loudness Normalization
+    abbr: Norm
+    type: Numerical
+    min: 0
+    max: 100
+    default_value: 0
+    is_flag: true
+    flag: P
   loudness_compensation:
     name: Pitch-Change Loudness Compensation
     abbr: Loud

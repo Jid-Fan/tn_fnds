@@ -23,6 +23,8 @@ Start with the default settings, or try:
 W-1
 W-1 with Loop Mode set to `pingpong`
 W-1hq1
+W-1mf100hq2
+W-1hs100
 W-1mf100
 W-1 with Loop Mode set to `pingpong`, `ls500`, and `lf-300`
 ```
@@ -33,8 +35,10 @@ Suggested order:
 2. Try Loop Mode `pingpong` if a forward loop sounds too obvious.
 3. Adjust `ls` and `lf` if the loop boundaries are in the wrong places.
 4. Adjust `cf` if the boundary produces a click, pop, or other short noise.
-5. Compare `mf` and `hq1` when you need pitch movement.
-6. Try `sv` or `A` only after the basic loop and pitch settings sound right.
+5. Compare `mf`, `hq1`, and `hq2` when you need pitch movement.
+6. Try `hs` if you want to replace the stable vowel region with a clearer
+   harmonic sound.
+7. Try `sv` or `A` only after the basic loop and pitch settings sound right.
 
 The best settings depend heavily on the voicebank's recording, `oto.ini`, and
 `frq` files. Extreme voicebanks often require more experimentation than clean
@@ -48,9 +52,20 @@ voicebanks.
 | --- | ---: | --- |
 | `W` | `-1`, `0–50`, `51–1000` | Selects the pitch source used by the resampler. `W-1` avoids forcing an analyzed musical F0 and is usually the best starting point for chaotic extreme vocals. `W0–50` uses the analyzed pitch. `W51–1000` uses a fixed F0 value. |
 | `mf` | `0–100` | Legacy granular pitch-following mode. It changes the spacing of residual grains. It can retain a useful high-pitched character, but may also sound granular or become less stable at larger pitch changes. |
-| `hq1` | `0–1` | Enables an alternative continuous pitch-shifting path based on Rubber Band, with formant preservation. Its sound may be smoother or less suitable depending on the voicebank and pitch change, and it may use more CPU than the other path. |
+| `hq1` | `0–1` | Enables a full-note continuous pitch-shifting path based on Rubber Band, with formant preservation. Its sound may be smoother or less suitable depending on the voicebank and pitch change, and it may use more CPU than the other path. |
+| `hq2` | `0–2` | Experimental extreme-vocal hybrid path. The low-frequency pitch scaffold is shifted with Rubber Band while high-frequency rasp, noise, shimmer, and other unstable texture are kept from the original waveform. It is mainly intended for extreme vocals and may sound layered or out of tune on clean voicebanks. |
 | `t` | approximately `-100–100` | Pitch offset, approximately 10 cents per unit. |
 | `A` | `0–100` | Compensates volume changes caused by pitch movement. It does not replace normal volume automation. |
+| `P` | `0–100` | Approximate loudness normalization. `P0` keeps the historical output level; higher values move the active RMS toward a common target. This is not LUFS metering. |
+
+### Vocal character
+
+| Flag | Range | Description |
+| --- | ---: | --- |
+| `hs` | `0–100` | Replaces the stable vowel region with a harmonic layer whose spectral envelope follows the rendered source over time, retaining broad mouth/formant movement without retaining the original shimmer and noise at high values. `hs0` is the default and changes nothing; `hs100` is a full harmonic replacement and can still sound synthetic. |
+| `he` | `0–100` | Searches for actual spectral peaks near the requested harmonic positions and emphasizes them without adding harmonics or replacing the waveform. It tolerates some pitch drift in extreme vocals, making the effect easier to hear than an exact-frequency boost. |
+| `hf` | `0–100` | Experimental forced melodic layer. When `he` finds little existing energy, `hf` adds a small random-phase periodic component at the requested positions. It can make an otherwise non-harmonic sound more melodic, but may sound clearly synthetic. |
+| `ho` | `-2000–2000` ms | Manually moves the estimated `hs` onset. Positive values start harmonic cleaning later; negative values start it earlier. `ho0` leaves the automatic estimate unchanged. |
 
 ### Looping
 
@@ -76,7 +91,10 @@ voicebanks.
 
 `g` and the original resampler's other standard controls are retained for
 compatibility. The main experimental controls of `tn_fndScream` are `W`, `mf`,
-`hq`, Loop Mode, `ls`, `lf`, `cf`, `rs`, `rf`, and `sv`.
+`hq`, `hs`, `he`, `hf`, Loop Mode, `ls`, `lf`, `cf`, `rs`, `rf`, and `sv`.
+
+`hs` is intentionally separate from `hq`: it is a vocal-character effect, not
+a pitch-shifting algorithm selector.
 
 ## Choosing a looping method
 
@@ -140,9 +158,10 @@ This is a known trade-off of the legacy `mf` path. Compare it with:
 hq1
 ```
 
-`mf` and `hq1` are different synthesis paths. Neither is guaranteed to be
-better for extreme vocals; their results depend on the recording and the
-requested pitch movement.
+`mf`, `hq1`, and `hq2` are different synthesis paths. Neither is guaranteed
+to be better for extreme vocals; their results depend on the recording and
+the requested pitch movement. `hq2` is intended to preserve more of the
+original high-frequency extreme-vocal texture.
 
 ### “The volume changes across the loop”
 
@@ -156,6 +175,25 @@ sv60
 Use moderate values first. Extreme vocals often contain real shimmer and
 nonlinear level changes; excessive stabilization can make them less lively.
 
+### “I want a cleaner, more harmonic version of the extreme vocal”
+
+Try:
+
+```text
+hs30
+hs60
+hs100
+```
+
+The effect starts after an automatically estimated consonant/unstable-onset
+boundary. Use `ho` if that estimate is too early or too late. The stable
+vowel's broad spectral envelope is used as an approximate mouth/formant shape.
+Higher values make the harmonic replacement more prominent. The feature
+follows the source's changing spectral envelope instead of using one fixed
+vowel shape, which preserves broad mouth movement without carrying over the
+original shimmer and noise at `hs100`. It can still sound synthetic because
+the added harmonic structure was not present in the recording.
+
 ## Known limitations
 
 - The quality of `oto.ini` and `frq` has a major effect on the result.
@@ -167,8 +205,13 @@ nonlinear level changes; excessive stabilization can make them less lively.
   depending on the source material and the residual synthesis path.
 - Short recordings provide very little room for a stable loop. Manual boundary
   adjustment may still be necessary.
-- `hq1` may be slower and can produce a different vocal identity from the
-  granular path.
+- `hq1` and `hq2` may be slower and can produce a different vocal identity
+  from the granular path.
+- `hq2` is experimental and uses a conservative frequency split; it is not a
+  guaranteed harmonic/noise separation.
+- `hs` is an experimental harmonicizer, not a trained neural vocoder. It does
+  not know the exact vowel identity and may sound buzzy or synthetic at high
+  values.
 - `pingpong` can still sound artificial when the chosen loop region contains strong
   changes in pitch, spectrum, or volume.
 - The resampler is experimental. Results are not guaranteed to be better than

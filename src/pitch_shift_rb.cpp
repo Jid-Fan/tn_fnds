@@ -121,3 +121,75 @@ int rubberBandPitchShift(const double *input, int inputLength, int fs,
 
     return 1;
 }
+
+static void splitLowAndTexture(const double *input, int length, int fs,
+                               std::vector<double> *low,
+                               std::vector<double> *texture)
+{
+    if(input == NULL || low == NULL || texture == NULL || length <= 0)
+        return;
+
+    low->assign((size_t)length, 0.0);
+    texture->assign((size_t)length, 0.0);
+
+    /*
+     * Two cascaded one-pole sections make a deliberately gentle
+     * low-frequency scaffold. The texture is the exact complementary
+     * remainder, so the split itself does not change the source waveform.
+     *
+     * Extreme vocals often have no reliable F0, while their low-frequency
+     * movement can still provide a useful perceptual pitch cue. This is
+     * therefore intentionally not a hard harmonic/noise classifier.
+     */
+    const double cutoffHz = std::min(1800.0,
+        std::max(500.0, (double)fs * 0.18));
+    const double alpha = 1.0 - std::exp(
+        -6.28318530717958647692 * cutoffHz / (double)fs);
+    double first = 0.0;
+    double second = 0.0;
+
+    for(int i = 0; i < length; i++)
+    {
+        first += alpha * (input[i] - first);
+        second += alpha * (first - second);
+        (*low)[(size_t)i] = second;
+        (*texture)[(size_t)i] = input[i] - second;
+    }
+}
+
+int hybridExtremePitchShift(const double *input, int inputLength, int fs,
+                            double pitchScale, double *output)
+{
+    if(input == NULL || output == NULL || inputLength <= 0 || fs < 8000 ||
+       !std::isfinite(pitchScale) || pitchScale <= 0.0)
+        return 0;
+
+    if(std::fabs(pitchScale - 1.0) < 0.00001)
+    {
+        for(int i = 0; i < inputLength; i++) output[i] = input[i];
+        return 1;
+    }
+
+    std::vector<double> low;
+    std::vector<double> texture;
+    splitLowAndTexture(input, inputLength, fs, &low, &texture);
+    if((int)low.size() != inputLength ||
+       (int)texture.size() != inputLength)
+        return 0;
+
+    std::vector<double> shiftedLow((size_t)inputLength, 0.0);
+    if(!rubberBandPitchShift(low.data(), inputLength, fs, pitchScale,
+                             shiftedLow.data()))
+        return 0;
+
+    /*
+     * hq2 deliberately does not pitch-shift the high-frequency path.
+     * Rasp, breath noise, shimmer, and other unstable details stay attached
+     * to the original recording instead of being forced into a harmonic
+     * target structure.
+     */
+    for(int i = 0; i < inputLength; i++)
+        output[i] = shiftedLow[(size_t)i] + texture[(size_t)i];
+
+    return 1;
+}
