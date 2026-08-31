@@ -1,5 +1,7 @@
 # tn_fndScream
 
+[English](README.md) | [简体中文](README.zh-CN.md)
+
 An experimental UTAU resampler primarily intended for harsh vocals, such as
 metal screams and growls, and for recordings with strongly aperiodic or
 unstable vocal structures.
