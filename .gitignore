@@ -5,3 +5,5 @@ src/tn_fndScream
 vendor/*.zip
 vendor/**/*.o
 test-output/
+test_he*/
+test_hf*/

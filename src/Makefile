@@ -5,7 +5,7 @@ INCLUDES = -I. -I../vendor/rubberband-3.3.0
 LIBS = 
 
 tn_fndScream : $(OBJS) fft.h mmsystem.h windows.h wavread.h world.h
-	$(CXX) -o $@ $(OBJS) $(LIBS) $(CFLAGS)
+	$(CXX) -static -o $@ $(OBJS) $(LIBS) $(CFLAGS)
 
 .cpp.o:
 	$(CXX) $(CFLAGS) $(INCLUDES) -c $<
