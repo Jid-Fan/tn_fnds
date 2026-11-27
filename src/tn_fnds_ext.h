@@ -15,6 +15,7 @@ void freeFrqData(FrqData *data);
 int findFrqForWav(const char *wavPath, char *frqPath, int frqPathLength);
 
 void setMelodyF0Control(double *melodyF0, int tLen, int strength);
+void setSampleReferenceF0(double f0);
 void setHarmonicSource(const double *source, int length, int fs,
                        int boundaryMs);
 void setHarmonicOutputBoundary(int boundaryMs);

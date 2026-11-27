@@ -37,6 +37,15 @@ static int g_harmonicSourceLength = 0;
 static int g_harmonicSourceFs = 0;
 static int g_harmonicSourceBoundaryMs = 0;
 static int g_harmonicOutputBoundaryMs = 0;
+static double g_sampleReferenceF0 = 0.0;
+
+/*
+ * Reference pitch of the source sample. The melody-follow clock
+ * historically assumed every grain corresponds to DEFAULT_F0 (500 Hz),
+ * which detunes output by 12*log2(actualPitch/500) cents. When a .frq
+ * sidecar is available, its median frequency replaces that fiction;
+ * otherwise the caller leaves this unset and the old behavior applies.
+ */
 
 static int getIntegerFlag(char flagName);
 static void fillPitchBend(const char *encoded, int *pitch, int count);
@@ -57,6 +66,11 @@ void setHarmonicSource(const double *source, int length, int fs,
     g_harmonicSourceBoundaryMs = max(0, boundaryMs);
 }
 
+void setSampleReferenceF0(double f0)
+{
+    g_sampleReferenceF0 = (f0 > 1.0 && f0 < 4000.0) ? f0 : 0.0;
+}
+
 void setHarmonicOutputBoundary(int boundaryMs)
 {
     g_harmonicOutputBoundaryMs = max(0, boundaryMs);
@@ -73,7 +87,16 @@ static double getSynthesisF0(double fixedDefault_f0, double *f0,
     {
         double targetF0 = g_melodyF0[sourceFrame];
         double strength = (double)g_melodyFollow / 100.0;
-        return exp(log(max(1.0, fixedDefault_f0)) * (1.0 - strength) +
+        /*
+         * Interpolate the grain clock between the sample's reference pitch
+         * and the requested melody. With a measured reference the endpoints
+         * are physically meaningful: at strength 1 the output pitch equals
+         * the note pitch instead of being offset by the sample's distance
+         * from DEFAULT_F0.
+         */
+        double referenceF0 = g_sampleReferenceF0 > 1.0 ?
+            g_sampleReferenceF0 : fixedDefault_f0;
+        return exp(log(max(1.0, referenceF0)) * (1.0 - strength) +
                    log(targetF0) * strength);
     }
 
@@ -4300,13 +4323,15 @@ static double getMelodyPitchScale(double fixedDefault_f0)
      * Pitch ratios are multiplicative, so a geometric mean is less
      * sensitive to a short pitch-bend tail than an arithmetic mean.
      */
+    double referenceF0 = g_sampleReferenceF0 > 1.0 ?
+        g_sampleReferenceF0 : fixedDefault_f0;
     double logarithmicSum = 0.0;
     int count = 0;
     for(int i = 0; i < g_melodyF0Length; i++)
     {
         if(g_melodyF0[i] > 1.0)
         {
-            logarithmicSum += log(g_melodyF0[i] / fixedDefault_f0);
+            logarithmicSum += log(g_melodyF0[i] / referenceF0);
             count++;
         }
     }

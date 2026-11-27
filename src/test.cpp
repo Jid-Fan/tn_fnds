@@ -868,6 +868,66 @@ void autoVolume(double *f0, int tLen, int fs, double *volume, int flag_A)
 	if(f0[tLen-1] != 0.0 && f0[tLen-2] != 0.0) volume[tLen-1] = volume[tLen-2];
 }
 
+/*
+ * Try to read a .frq sidecar for the source sample and return its median
+ * frequency. This is the sample's actual pitch, used as the melody-follow
+ * clock reference instead of the DEFAULT_F0 constant. Returns 0.0 when no
+ * usable .frq exists, in which case synthesis keeps the historical fixed
+ * reference and nothing else changes.
+ */
+static double loadSampleReferenceF0(const char *wavPath)
+{
+    char frqPath[4096];
+    FrqData frq;
+    double *values;
+    int count = 0;
+    double median = 0.0;
+
+    if(wavPath == NULL ||
+       !findFrqForWav(wavPath, frqPath, (int)sizeof(frqPath)) ||
+       !loadFrqFile(frqPath, &frq))
+    {
+        return 0.0;
+    }
+
+    values = (double *)malloc(sizeof(double) * (size_t)max(1, frq.frameCount));
+    if(values == NULL)
+    {
+        freeFrqData(&frq);
+        return 0.0;
+    }
+
+    for(int i = 0; i < frq.frameCount; i++)
+    {
+        /* Keep only plausible voiced pitches; ignore silence/garbage. */
+        if(frq.frequency[i] >= 50.0 && frq.frequency[i] <= 1500.0)
+            values[count++] = frq.frequency[i];
+    }
+
+    if(count >= 8)
+    {
+        int middle = count / 2;
+        /* Small insertion sort: frq frame counts are modest (a few k). */
+        for(int i = 1; i < count; i++)
+        {
+            double v = values[i];
+            int j = i - 1;
+            while(j >= 0 && values[j] > v)
+            {
+                values[j + 1] = values[j];
+                j--;
+            }
+            values[j + 1] = v;
+        }
+        median = (count % 2 == 1) ? values[middle] :
+            0.5 * (values[middle - 1] + values[middle]);
+    }
+
+    free(values);
+    freeFrqData(&frq);
+    return median;
+}
+
 static int getLoudnessNormalizationFlag(int argc, char **argv)
 {
 	int flag_P = 0;
@@ -1084,6 +1144,13 @@ int main(int argc, char *argv[])
 	}
 
 	setHarmonicSource(x, signalLen, fs, offset);
+
+	/*
+	 * Use the .frq sidecar's median pitch as the melody-follow reference
+	 * when available; otherwise synthesis keeps the historical DEFAULT_F0
+	 * constant and rendering is unchanged.
+	 */
+	setSampleReferenceF0(loadSampleReferenceF0(argv[1]));
 
 	printf("File information\n");
 	printf("Sampling : %d Hz %d Bit\n", fs, nbit);
