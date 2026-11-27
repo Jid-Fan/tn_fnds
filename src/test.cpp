@@ -899,8 +899,13 @@ static double loadSampleReferenceF0(const char *wavPath)
 
     for(int i = 0; i < frq.frameCount; i++)
     {
-        /* Keep only plausible voiced pitches; ignore silence/garbage. */
-        if(frq.frequency[i] >= 50.0 && frq.frequency[i] <= 1500.0)
+        /*
+         * Keep only plausible voiced pitches. The lower bound matters:
+         * some .frq generators write a fixed low placeholder (e.g. 55 Hz)
+         * into unvoiced frames instead of zero, which would otherwise
+         * dominate the median and poison the reference.
+         */
+        if(frq.frequency[i] >= 80.0 && frq.frequency[i] <= 1200.0)
             values[count++] = frq.frequency[i];
     }
 

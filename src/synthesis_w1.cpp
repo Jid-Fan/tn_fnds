@@ -68,7 +68,7 @@ void setHarmonicSource(const double *source, int length, int fs,
 
 void setSampleReferenceF0(double f0)
 {
-    g_sampleReferenceF0 = (f0 > 1.0 && f0 < 4000.0) ? f0 : 0.0;
+    g_sampleReferenceF0 = (f0 > 70.0 && f0 < 1300.0) ? f0 : 0.0;
 }
 
 void setHarmonicOutputBoundary(int boundaryMs)
