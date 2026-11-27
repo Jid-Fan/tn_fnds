@@ -56,7 +56,7 @@ voicebanks.
 | Flag | Range | Description |
 | --- | ---: | --- |
 | `W` | `-1`, `0–50`, `51–1000` | Selects the pitch source used by the resampler. `W-1` avoids forcing an analyzed musical F0 and is usually the best starting point for chaotic extreme vocals. `W0–50` uses the analyzed pitch. `W51–1000` uses a fixed F0 value. |
-| `mf` | `0–100` | Legacy granular pitch-following mode. It changes the spacing of residual grains. It can retain a useful high-pitched character, but may also sound granular or become less stable at larger pitch changes. |
+| `mf` | `0–100` | Melody-follow strength: blends the rendered pitch between the sample's own pitch and the piano-roll note (geometric interpolation; `mf100` = fully follow the note). Any value above 0 is also required to enable the `hs`, `hq`, and `lc` paths on notes without a stable analyzed pitch. Pitch movement relies on residual-grain spacing and can sound granular or unstable at larger pitch changes. |
 | `hq1` | `0–1` | Enables a full-note continuous pitch-shifting path based on Rubber Band, with formant preservation. Its sound may be smoother or less suitable depending on the voicebank and pitch change, and it may use more CPU than the other path. |
 | `hq2` | `0–2` | Experimental extreme-vocal hybrid path. The low-frequency pitch scaffold is shifted with Rubber Band while high-frequency rasp, noise, shimmer, and other unstable texture are kept from the original waveform. It is mainly intended for extreme vocals and may sound layered or out of tune on clean voicebanks. |
 | `t` | approximately `-100–100` | Pitch offset, approximately 10 cents per unit. |
@@ -157,7 +157,7 @@ section remains artificial, use forward looping instead.
 
 ### “The result sounds granular or gets stuck”
 
-This is a known trade-off of the legacy `mf` path. Compare it with:
+This is a known trade-off of the granular `mf` path. Compare it with:
 
 ```text
 hq1

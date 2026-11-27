@@ -27,7 +27,7 @@ expressions:
     is_flag: true
     flag: A
   granular_pitch:
-    name: 颗粒间距变调强度（旧版路径）
+    name: 旋律跟随强度（hs/hq 需此项大于 0；100=完全跟随卷帘音高）
     abbr: Mfol
     type: Numerical
     min: 0
@@ -45,7 +45,7 @@ expressions:
     is_flag: true
     flag: mt
   high_quality:
-    name: 变调算法（0=旧版，1=完整变调，2=极端嗓混合）
+    name: 变调算法（0=逐颗粒，1=整音符变调，2=极端嗓混合）
     abbr: Qual
     type: Numerical
     min: 0

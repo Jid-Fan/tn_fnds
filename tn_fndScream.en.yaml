@@ -27,7 +27,7 @@ expressions:
     is_flag: true
     flag: A
   granular_pitch:
-    name: Granular Pitch Tracking (Legacy Path)
+    name: Melody Follow Strength (needed for hs/hq; 100 = fully follow note pitch)
     abbr: Mfol
     type: Numerical
     min: 0
@@ -45,7 +45,7 @@ expressions:
     is_flag: true
     flag: mt
   high_quality:
-    name: Pitch-Shift Algorithm (0=legacy, 1=full, 2=extreme-vocal hybrid)
+    name: Pitch-Shift Algorithm (0=per-grain, 1=full-note, 2=extreme-vocal hybrid)
     abbr: Qual
     type: Numerical
     min: 0
